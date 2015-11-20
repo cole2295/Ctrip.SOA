@@ -1,0 +1,173 @@
+﻿
+<#+
+    public class ClassGenInfo
+    {
+        public string NameSpace { get; set; }
+        public string NameTrimStart { get; set; }
+        public string NameTrimEnd { get; set; }
+        public string NamePrefix { get; set; }
+        public string NameSuffix { get; set; }
+
+        public string GetClassName(string originName)
+        {
+            var  className = originName.Trim();
+
+            if (!string.IsNullOrWhiteSpace(this.NameTrimStart))
+            {
+                if (className.StartsWith(this.NameTrimStart, StringComparison.OrdinalIgnoreCase))
+                    className = className.Substring(this.NameTrimStart.Length);
+            }
+
+            if (!string.IsNullOrWhiteSpace(this.NameTrimEnd))
+            {
+                if (className.EndsWith(this.NameTrimEnd, StringComparison.OrdinalIgnoreCase))
+                    className = className.Substring(0, className.Length - this.NameTrimEnd.Length);
+            }
+
+            if (!string.IsNullOrWhiteSpace(this.NamePrefix))
+                className = this.NamePrefix + className;
+
+            if (!string.IsNullOrWhiteSpace(this.NameSuffix))
+                className = className + this.NameSuffix;
+
+            return className;
+
+        }
+
+        public bool IsNull(string dataType)
+        {
+            return !string.Equals("string",dataType);
+        }
+    }
+
+    // 用来做 ALL IN ONE 配置文件的读取
+    public class ConnectionStringReader
+    {
+        XDocument _configDocument;
+
+        public ConnectionStringReader(string connectionStringFile)
+        {
+            _configDocument = XDocument.Load(connectionStringFile);
+        }
+
+        public ConnectionStringInfo GetConnectionString(string name)
+        {
+            var element = _configDocument.Element("connectionStrings")
+                .Elements("add")
+                .Where(x => x.Attribute("name").Value.Equals(name, StringComparison.OrdinalIgnoreCase))
+                .FirstOrDefault();
+
+            if (element == null) return null;
+
+            return new ConnectionStringInfo(element.Attribute("connectionString").Value,
+                element.Attribute("providerName").Value);
+        }
+
+        public ConnectionStringInfo GetConnectionString(int index)
+        {
+            var element = _configDocument.Element("connectionStrings")
+                .Elements("add")
+                .ElementAt(index);
+
+            if (element == null) return null;
+
+            return new ConnectionStringInfo(element.Attribute("connectionString").Value,
+                element.Attribute("providerName").Value);
+        }
+    }
+
+    public class ConnectionStringInfo
+    {
+        public ConnectionStringInfo(string connectionString, string providerName)
+        {
+            this.ConnectionString = connectionString;
+            this.ProviderName = providerName;
+        }
+
+        public string ConnectionString { get; set; }
+        public string ProviderName { get; set; }
+    }
+
+    public static class ColumnSchemaHelper
+    {
+        public static DbType GetDbType(DatabaseSchemaReader.DataSchema.DatabaseColumn colSchema)
+        {
+            var sqlType = (SqlDbType)colSchema.DataType.ProviderDbType;
+
+            switch (sqlType)
+            {
+                case SqlDbType.BigInt:
+                    return DbType.Int64;
+                case SqlDbType.Binary:
+                    return DbType.Binary;
+                case SqlDbType.Bit:
+                    return DbType.Boolean;
+                case SqlDbType.Char:
+                    return DbType.AnsiStringFixedLength;
+                case SqlDbType.DateTime:
+                    return DbType.DateTime;
+                case SqlDbType.Decimal:
+                    return DbType.Decimal;
+                case SqlDbType.Float:
+                    return DbType.String;
+                case SqlDbType.Image:
+                    return DbType.Binary;
+                case SqlDbType.Int:
+                    return DbType.Int32;
+                case SqlDbType.Money:
+                    return DbType.Decimal;
+                case SqlDbType.NChar:
+                    return DbType.StringFixedLength;
+                case SqlDbType.NText:
+                    return DbType.String;
+                case SqlDbType.NVarChar:
+                    return DbType.String;
+                case SqlDbType.Real:
+                    return DbType.Single;
+                case SqlDbType.UniqueIdentifier:
+                    return DbType.Guid;
+                case SqlDbType.SmallDateTime:
+                    return DbType.DateTime;
+                case SqlDbType.SmallInt:
+                    return DbType.Int16;
+                case SqlDbType.SmallMoney:
+                    return DbType.Decimal;
+                case SqlDbType.Text:
+                    return DbType.String;
+                case SqlDbType.Timestamp:
+                    return DbType.Binary;
+                case SqlDbType.TinyInt:
+                    return DbType.SByte;
+                case SqlDbType.VarBinary:
+                    return DbType.Binary;
+                case SqlDbType.VarChar:
+                    return DbType.String;
+                case SqlDbType.Variant:
+                    return DbType.Object;
+                case SqlDbType.Xml:
+                    return DbType.Xml;
+                case SqlDbType.Udt:
+                    return DbType.Binary;
+                case SqlDbType.Structured:
+                    return DbType.Binary;
+                case SqlDbType.Date:
+                    return DbType.Date;
+                case SqlDbType.Time:
+                    return DbType.Time;
+                case SqlDbType.DateTime2:
+                    return DbType.DateTime2;
+                case SqlDbType.DateTimeOffset:
+                    return DbType.DateTimeOffset;
+                default:
+                    throw new ArgumentOutOfRangeException("sqlType");
+            }
+        }
+
+        public static string GetDbTypeString(DatabaseSchemaReader.DataSchema.DatabaseColumn colSchema)
+        {
+            var dbType = GetDbType(colSchema);
+            return "DbType." + dbType;
+        }
+    }
+#>
+

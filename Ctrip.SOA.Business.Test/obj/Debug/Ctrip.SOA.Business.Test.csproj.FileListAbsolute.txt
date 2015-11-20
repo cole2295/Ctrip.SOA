@@ -1,0 +1,7 @@
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Business.Test\bin\Debug\Ctrip.SOA.Business.Test.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Business.Test\bin\Debug\Ctrip.SOA.Business.Test.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Business.Test\bin\Debug\DatabaseSchemaReader.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Business.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Business.Test\obj\Debug\Ctrip.SOA.Business.Test.csprojResolveAssemblyReference.cache
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Business.Test\obj\Debug\Ctrip.SOA.Business.Test.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Business.Test\obj\Debug\Ctrip.SOA.Business.Test.pdb

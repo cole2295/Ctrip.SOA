@@ -1,0 +1,151 @@
+﻿<#+
+    public class SelectDBTemplate : Template
+    {
+        private DatabaseSchemaReader.DataSchema.DatabaseTable _databaseTable;
+        private ClassGenInfo _classGenInfo;
+
+        public SelectDBTemplate(ClassGenInfo classGenInfo, DatabaseSchemaReader.DataSchema.DatabaseTable databaseTable)
+        {
+            _classGenInfo = classGenInfo;
+            _databaseTable = databaseTable;
+        }
+
+        private string _className;
+        protected string ClassName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_className))
+                {
+                    _className = _classGenInfo.GetClassName(_databaseTable.Name);
+                }
+                return _className;
+            }
+        }
+
+        private string _fileName;
+        public string FileName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_fileName))
+                {
+                    _fileName = ClassName + "SelectDB.cs";
+                }
+
+                return _fileName;
+            }
+        }
+
+        private string _tableName;
+        protected string TableName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_tableName))
+                {
+                    _tableName = ClassName.Substring(0, ClassName.Length -_classGenInfo.NameSuffix.Length);
+                }
+
+                return _tableName;
+            }
+        }
+
+        private string _modelName;
+        protected string ModelName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_modelName))
+                {
+                    _modelName = TableName + "Model";
+                }
+
+                return _modelName;
+            }
+        }
+
+        private string _entityName;
+        public string EntityName
+        {
+            get
+            {
+                if(string.IsNullOrWhiteSpace(_entityName))
+                {
+                    _entityName = TableName + "Entity";
+                }
+
+                return _entityName;
+            }
+        }
+
+        private string _repositoryName;
+        protected string RepositoryName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_repositoryName))
+                {
+                    _repositoryName = TableName + "Repository";
+                }
+
+                return _repositoryName;
+            }
+        }
+
+        public override string TransformText()
+        {
+#>
+/* ->
+* -> 该代码使用工具生成，请勿手动修改 
+* -> 生成时间： <#=            DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") #> 
+*/
+
+
+using Ctrip.SOA.Repository.<#= _databaseTable.Name #>.Interface;
+using Ctrip.SOA.Repository.<#= _databaseTable.Name #>.Model;
+using HHInfratructure.Data;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ctrip.SOA.Repository.<#= _databaseTable.Name #>.Dal
+{
+    public class <#= _databaseTable.Name #>SelectDB : DALContext, I<#= _databaseTable.Name #>SelectDB
+    {
+        public <#= _databaseTable.Name #>SelectDB():base(DBConsts.TestDB)
+        { }
+
+        public <#= _databaseTable.Name #>Entity Select<#= _databaseTable.Name #>(long <#= _databaseTable.Name.ToLower() #>Id)
+        {
+            const string SQL = "SELECT * FROM [<#= _databaseTable.Name #>] WITH(NOLOCK) WHERE [<#= _databaseTable.Name #>Id] = @<#= _databaseTable.Name #>Id";
+            var dbCommand = DB.GetSqlStringCommand(SQL);
+            DB.AddInParameter(dbCommand, "@<#= _databaseTable.Name #>Id", DbType.Int64, <#= _databaseTable.Name.ToLower() #>Id);
+            using (var reader = DB.ExecuteReader(dbCommand))
+            {
+                return DbHelper.ConvertToEntity<<#= _databaseTable.Name #>Entity>(reader);
+            }
+        }
+
+        public List<<#= _databaseTable.Name #>Entity> SelectAll<#= _databaseTable.Name #>s()
+        {
+            const string SQL = "SELECT * FROM [<#= _databaseTable.Name #>] WITH(NOLOCK) ";
+            var dbCommand = DB.GetSqlStringCommand(SQL);
+            using (var reader = DB.ExecuteReader(dbCommand))
+            {
+                return DbHelper.ConvertToEntityList<<#= _databaseTable.Name #>Entity>(reader);
+            }
+        }
+    }
+}
+
+
+
+<#+
+            return this.GenerationEnvironment.ToString();
+        }
+    }
+#>

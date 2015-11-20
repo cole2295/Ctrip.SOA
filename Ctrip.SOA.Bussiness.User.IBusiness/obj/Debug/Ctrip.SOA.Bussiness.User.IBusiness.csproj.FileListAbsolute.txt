@@ -1,0 +1,63 @@
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Ctrip.SOA.Bussiness.User.IBusiness.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Ctrip.SOA.Bussiness.User.IBusiness.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\obj\Debug\Ctrip.SOA.Bussiness.User.IBusiness.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\obj\Debug\Ctrip.SOA.Bussiness.User.IBusiness.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\obj\Debug\Ctrip.SOA.Bussiness.User.IBusiness.csprojResolveAssemblyReference.cache
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Ctrip.SOA.Bussiness.User.DataContract.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Ctrip.SOA.Infratructure.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Newtonsoft.Json.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Arch.App.Cache.Client.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Arch.Data.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\AutoMapper.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\ChineseConverter.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Arch.CFX.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Arch.Framework.Utility.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Ctrip.SOA.Bussiness.User.DataContract.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Ctrip.SOA.Infratructure.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Unity.Wcf.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Framework.Logging.V2.API.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\log4net.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\System.Web.Mvc.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\System.Web.Mvc.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Ctrip.SOA.Bussiness.User.IBusiness.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Ctrip.SOA.Bussiness.User.IBusiness.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Ctrip.SOA.Bussiness.User.DataContract.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Ctrip.SOA.Infratructure.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Arch.Data.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\System.Web.Mvc.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\log4net.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Arch.App.Cache.Client.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\AutoMapper.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Arch.Framework.Utility.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Newtonsoft.Json.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\ChineseConverter.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Arch.CFX.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Unity.Wcf.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Framework.Logging.V2.API.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Ctrip.SOA.Bussiness.User.DataContract.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Ctrip.SOA.Infratructure.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\System.Web.Mvc.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\obj\Debug\Ctrip.SOA.Bussiness.User.IBusiness.csprojResolveAssemblyReference.cache
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\obj\Debug\Ctrip.SOA.Bussiness.User.IBusiness.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User.IBusiness\obj\Debug\Ctrip.SOA.Bussiness.User.IBusiness.pdb

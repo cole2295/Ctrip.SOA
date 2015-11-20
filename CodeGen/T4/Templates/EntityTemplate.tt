@@ -1,0 +1,98 @@
+﻿<#+
+    public class EntityTemplate : Template
+    {
+        private DatabaseSchemaReader.DataSchema.DatabaseTable _databaseTable;
+        private ClassGenInfo _classGenInfo;
+
+        public EntityTemplate(ClassGenInfo classGenInfo, DatabaseSchemaReader.DataSchema.DatabaseTable databaseTable)
+        {
+            _classGenInfo = classGenInfo;
+            _databaseTable = databaseTable;
+        }
+
+        private string _className;
+        protected string ClassName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_className))
+                {
+                    _className = _classGenInfo.GetClassName(_databaseTable.Name);
+                }
+
+                return _className;
+            }
+        }
+
+        private string _fileName;
+        public string FileName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_fileName))
+                {
+                    _fileName = ClassName + ".cs";
+                }
+
+                return _fileName;
+            }
+        }
+
+        protected string GenerateColumnAttribute(DatabaseSchemaReader.DataSchema.DatabaseColumn colSchema)
+        {
+            string result = "[Column(Name = \"" + colSchema.Name + "\"";
+
+            if(colSchema.Length != null)
+                result += ", Length = " + colSchema.Length;
+
+            result += ")";
+        
+            if(colSchema.IsPrimaryKey)
+                result += ", PK";
+
+            if(colSchema.IsAutoNumber)
+                result += ", ID";
+
+            result += "]";
+            
+            return result;
+        }
+
+        public override string TransformText()
+        {
+#>
+/* ->
+ * -> 该代码使用工具生成，请勿手动修改 
+ * -> 生成时间： <#= DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") #> 
+ */
+
+using System;
+
+namespace <#= _classGenInfo.NameSpace #>
+{
+    /// <summary>
+    /// <#= _databaseTable.Name #> || <#= _databaseTable.Description ?? string.Empty #>
+    /// </summary>    
+    [Serializable]
+    public class <#= ClassName #>
+    {
+<#+
+            foreach(var colSchema in _databaseTable.Columns)
+            {
+ #>
+        /// <summary>
+        /// <#= colSchema.Description ?? string.Empty #>
+        /// </summary>
+        public <#= colSchema.DataType.NetDataTypeCSharpName #><#= (colSchema.IsPrimaryKey || !colSchema.Nullable) ? "" : "?"  #> <#= colSchema.Name #> { get; set; }
+
+<#+ 
+            }            
+#>
+    }
+}
+<#+
+            return this.GenerationEnvironment.ToString();
+        }
+    }
+#>
+

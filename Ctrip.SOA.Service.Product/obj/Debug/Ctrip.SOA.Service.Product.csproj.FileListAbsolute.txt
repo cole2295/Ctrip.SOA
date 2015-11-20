@@ -1,0 +1,12 @@
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.Product\bin\Ctrip.SOA.Service.Product.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.Product\bin\Ctrip.SOA.Service.Product.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.Product\obj\Debug\Ctrip.SOA.Service.Product.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.Product\obj\Debug\Ctrip.SOA.Service.Product.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.Product\bin\Ctrip.SOA.Service.Product.dll.config
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.Product\bin\Ctrip.SOA.Service.Product.dll.config
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.Product\bin\Ctrip.SOA.Service.Product.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.Product\bin\Ctrip.SOA.Service.Product.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.Product\obj\Debug\Ctrip.SOA.Service.Product.csprojResolveAssemblyReference.cache
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.Product\obj\Debug\Ctrip.SOA.Service.Product.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.Product\obj\Debug\Ctrip.SOA.Service.Product.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.Product\obj\Debug\Ctrip.SOA.Service.Product.csprojResolveAssemblyReference.cache

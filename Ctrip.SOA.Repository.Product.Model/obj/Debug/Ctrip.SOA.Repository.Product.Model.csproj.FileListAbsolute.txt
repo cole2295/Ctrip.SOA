@@ -1,0 +1,8 @@
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Product.Model\bin\Debug\Ctrip.SOA.Repository.Product.Model.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Product.Model\bin\Debug\Ctrip.SOA.Repository.Product.Model.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Product.Model\obj\Debug\Ctrip.SOA.Repository.Product.Model.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Product.Model\obj\Debug\Ctrip.SOA.Repository.Product.Model.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Product.Model\bin\Debug\Ctrip.SOA.Repository.Product.Model.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Product.Model\bin\Debug\Ctrip.SOA.Repository.Product.Model.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Product.Model\obj\Debug\Ctrip.SOA.Repository.Product.Model.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Product.Model\obj\Debug\Ctrip.SOA.Repository.Product.Model.pdb

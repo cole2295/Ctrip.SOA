@@ -1,0 +1,97 @@
+﻿<#+
+    public class STDTemplate : Template
+    {
+        private DatabaseSchemaReader.DataSchema.DatabaseTable _databaseTable;
+        private ClassGenInfo _classGenInfo;
+
+        public STDTemplate(ClassGenInfo classGenInfo,DatabaseSchemaReader.DataSchema.DatabaseTable databaseTable)
+        {
+            _classGenInfo = classGenInfo;
+            _databaseTable = databaseTable;
+            PrimaryKeyName = _databaseTable.PrimaryKeyColumn.Name;
+        }
+
+        private string _className;
+        protected string ClassName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_className))
+                {
+                    _className = _classGenInfo.GetClassName(_databaseTable.Name);
+                }
+                return _className;
+            }
+        }
+
+        private string _tableName;
+        protected string TableName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_tableName))
+                {
+                    _tableName = ClassName;
+                }
+
+                return _tableName;
+            }
+        }
+
+        protected string PrimaryKeyName{get;set;}
+
+        private string _fileName;
+        public string FileName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_fileName))
+                {
+                    _fileName = ClassName + ".std";
+                }
+
+                return _fileName;
+            }
+        }
+
+        public override string TransformText()
+        {
+#>
+## 新增<#= _databaseTable.Description ?? TableName #>
+{
+	[Add<#=TableName #>Request]             ##输入参数
+	<#=TableName #> : me.<#=TableName #>    ##<#= _databaseTable.Description ?? TableName #>对象
+	[Add<#=TableName #>Response]            ##输出参数
+	ResponseStatus  : cm.ResponseStatusType ##返回状态
+	<#= PrimaryKeyName #>         : xs.long ##自增主键
+}
+
+## 移除<#= _databaseTable.Description ?? TableName #>
+{
+	[Remove<#=TableName #>Request]     ##输入参数
+	<#= PrimaryKeyName #> : xs.long        ##自增主键	
+	[Remove<#=TableName #>Response]    ##输出参数
+	ResponseStatus : cm.ResponseStatusType ##返回状态
+}
+
+## 编辑<#= _databaseTable.Description ?? TableName #>
+{
+	[Edit<#=TableName #>Request]            ##输入参数
+	<#=TableName #> : me.<#=TableName #>    ##图片对象
+	[Edit<#=TableName #>Response]           ##输出参数
+	ResponseStatus : cm.ResponseStatusType  ##返回状态
+}
+
+## 获取<#= _databaseTable.Description ?? TableName #>
+{
+	[Get<#=TableName #>Request]         ##输入参数
+	<#= PrimaryKeyName #> : xs.long         ##自增主键
+	[Get<#=TableName #>Response]		##输出参数
+	ResponseStatus : cm.ResponseStatusType  ##返回状态
+	<#=TableName #> : me.<#=TableName #>    ##<#= _databaseTable.Description ?? TableName #>对象
+}
+<#+
+            return this.GenerationEnvironment.ToString();
+        }
+    }
+#>

@@ -1,0 +1,96 @@
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\obj\Debug\Ctrip.SOA.Infratructure.Reflection.ReflectionSR.resources
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\obj\Debug\Ctrip.SOA.Infratructure.TypeConversion.TC.resources
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\obj\Debug\Ctrip.SOA.Infratructure.csproj.GenerateResource.Cache
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Ctrip.SOA.Infratructure.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Ctrip.SOA.Infratructure.pdb
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.App.Cache.Client.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.CFramework.Data.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.CFramework.Utility.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.CFX.CLoggingAdapter.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.CFX.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.Data.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.Framework.Logging.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.Framework.Security.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.Framework.Utility.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\AutoMapper.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\AutoMapper.Net4.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\ChineseConverter.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\IOCFactory.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\IOCFactoryModel.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\IPAddress.Client.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.Unity.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Newtonsoft.Json.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Unity.Wcf.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.Unity.xml
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\obj\Debug\Ctrip.SOA.Infratructure.dll
+c:\users\fengzj\documents\visual studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\obj\Debug\Ctrip.SOA.Infratructure.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Framework.Logging.V2.API.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\log4net.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\System.Web.Mvc.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\System.Web.Mvc.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Ctrip.SOA.Infratructure.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Ctrip.SOA.Infratructure.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.App.Cache.Client.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.CFramework.Data.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.CFramework.Utility.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.CFX.CLoggingAdapter.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.CFX.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.Data.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.Framework.Logging.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.Framework.Security.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Arch.Framework.Utility.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\AutoMapper.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\AutoMapper.Net4.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\ChineseConverter.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\IOCFactory.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\IOCFactoryModel.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\IPAddress.Client.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\log4net.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Newtonsoft.Json.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\System.Web.Mvc.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Unity.Wcf.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Framework.Logging.V2.API.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\System.Web.Mvc.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\obj\Debug\Ctrip.SOA.Infratructure.csprojResolveAssemblyReference.cache
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\obj\Debug\Ctrip.SOA.Infratructure.Reflection.ReflectionSR.resources
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\obj\Debug\Ctrip.SOA.Infratructure.TypeConversion.TC.resources
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\obj\Debug\Ctrip.SOA.Infratructure.csproj.GenerateResource.Cache
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\obj\Debug\Ctrip.SOA.Infratructure.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\obj\Debug\Ctrip.SOA.Infratructure.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\obj\Debug\Ctrip.SOA.Infratructure.csprojResolveAssemblyReference.cache

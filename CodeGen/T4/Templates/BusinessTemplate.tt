@@ -1,0 +1,214 @@
+﻿<#+
+    public class BusinessTemplate : Template
+    {
+        private DatabaseSchemaReader.DataSchema.DatabaseTable _databaseTable;
+        private ClassGenInfo _classGenInfo;
+
+        public BusinessTemplate(ClassGenInfo classGenInfo, DatabaseSchemaReader.DataSchema.DatabaseTable databaseTable)
+        {
+            _classGenInfo = classGenInfo;
+            _databaseTable = databaseTable;
+        }
+
+        private string _className;
+        protected string ClassName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_className))
+                {
+                    _className = _classGenInfo.GetClassName(_databaseTable.Name);
+                }
+                return _className;
+            }
+        }
+
+        private string _fileName;
+        public string FileName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_fileName))
+                {
+                    _fileName = ClassName + ".cs";
+                }
+
+                return _fileName;
+            }
+        }
+
+        private string _tableName;
+        protected string TableName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_tableName))
+                {
+                    _tableName = ClassName.Substring(0, ClassName.Length -_classGenInfo.NameSuffix.Length);
+                }
+
+                return _tableName;
+            }
+        }
+
+        private string _modelName;
+        protected string ModelName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_modelName))
+                {
+                    _modelName = TableName + "Model";
+                }
+
+                return _modelName;
+            }
+        }
+
+        private string _entityName;
+        public string EntityName
+        {
+            get
+            {
+                if(string.IsNullOrWhiteSpace(_entityName))
+                {
+                    _entityName = TableName + "Entity";
+                }
+
+                return _entityName;
+            }
+        }
+
+        private string _repositoryName;
+        protected string RepositoryName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_repositoryName))
+                {
+                    _repositoryName = TableName + "Repository";
+                }
+
+                return _repositoryName;
+            }
+        }
+
+        public override string TransformText()
+        {
+#>
+/* ->
+* -> 该代码使用工具生成，请勿手动修改 
+* -> 生成时间： <#=            DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") #> 
+*/
+
+using Ctrip.SOA.Bussiness.<#= _databaseTable.Name #>.DataContract;
+using Ctrip.SOA.Bussiness.<#= _databaseTable.Name #>.IBusiness;
+using Ctrip.SOA.Repository.<#= _databaseTable.Name #>.IRepository;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Ctrip.SOA.Infratructure.Utility;
+using Ctrip.SOA.Infratructure.ServiceProxy;
+
+namespace Ctrip.SOA.Bussiness.<#= _databaseTable.Name #>
+{
+    public class <#= _databaseTable.Name #>BLL:I<#= _databaseTable.Name #>BLL
+    {
+        private readonly I<#= _databaseTable.Name #>Repository <#= _databaseTable.Name.ToLower() #>Repository;
+
+        public <#= _databaseTable.Name #>BLL(I<#= _databaseTable.Name #>Repository <#= _databaseTable.Name.ToLower() #>Repository)
+        {
+            this.<#= _databaseTable.Name.ToLower() #>Repository = <#= _databaseTable.Name.ToLower() #>Repository;
+        }
+
+        public <#= _databaseTable.Name #>ModelResponse Add<#= _databaseTable.Name #>(<#= _databaseTable.Name #>ModelRequest entity)
+        {
+            try
+            {
+                var <#= _databaseTable.Name.ToLower() #>Entity = entity.MapTo<<#= _databaseTable.Name #>Entity>();
+               
+                long id = <#= _databaseTable.Name.ToLower() #>Repository.Add<#= _databaseTable.Name #>(<#= _databaseTable.Name.ToLower() #>Entity);
+
+                return id > 0 ? new <#= _databaseTable.Name #>ModelResponse { <#= _databaseTable.Name #>Id = id, IsSuccess = true } : new <#= _databaseTable.Name #>ModelResponse { IsSuccess = false, <#= _databaseTable.Name #>Id = 0 };
+            }
+            catch(Exception ex)
+            {
+                return new <#= _databaseTable.Name #>ModelResponse { <#= _databaseTable.Name #>Id = 0, IsSuccess = false, Msg = ex.Message };
+            }
+
+        }
+
+        public BaseResponse Update<#= _databaseTable.Name #>(<#= _databaseTable.Name #>ModelRequest entity)
+        {
+            try
+            {
+                var <#= _databaseTable.Name.ToLower() #>Entity = entity.MapTo<<#= _databaseTable.Name #>Entity>();
+                var <#= _databaseTable.Name.ToLower() #>model = <#= _databaseTable.Name.ToLower() #>Repository.Get<#= _databaseTable.Name #>(<#= _databaseTable.Name.ToLower() #>Entity.<#= _databaseTable.Name #>Id);
+
+                if (<#= _databaseTable.Name.ToLower() #>model == null)
+                    return new BaseResponse { IsSuccess = false, Msg = "can not find mddel" };
+
+             
+                bool result = <#= _databaseTable.Name.ToLower() #>Repository.Update<#= _databaseTable.Name #>(<#= _databaseTable.Name.ToLower() #>model);
+
+                return result ? new BaseResponse { IsSuccess = true } : new BaseResponse { IsSuccess = false};
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse { IsSuccess = false, Msg = ex.Message };
+            }
+        }
+
+        public BaseResponse Delete<#= _databaseTable.Name #>(<#= _databaseTable.Name #>ModelRequest entity)
+        {
+            try
+            {
+                var <#= _databaseTable.Name.ToLower() #>Entity = entity.MapTo<<#= _databaseTable.Name #>Entity>();
+                <#= _databaseTable.Name.ToLower() #>Repository.Delete<#= _databaseTable.Name #>(<#= _databaseTable.Name.ToLower() #>Entity);
+
+                return new BaseResponse { IsSuccess = true };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse { IsSuccess = false, Msg = ex.Message };
+            }
+        }
+
+        public List<<#= _databaseTable.Name #>ModelResponse> GetAll<#= _databaseTable.Name #>s()
+        {
+            try
+            {
+                List<<#= _databaseTable.Name #>Entity> <#= _databaseTable.Name.ToLower() #>s = <#= _databaseTable.Name.ToLower() #>Repository.GetAll<#= _databaseTable.Name #>();
+
+                return <#= _databaseTable.Name.ToLower() #>s.MapToList<<#= _databaseTable.Name #>ModelResponse>();
+            }
+            catch (Exception)
+            {
+                return null ;
+            }
+        }
+
+        public <#= _databaseTable.Name #>ModelResponse Get<#= _databaseTable.Name #>(<#= _databaseTable.Name #>ModelRequest entity)
+        {
+            try
+            {
+                <#= _databaseTable.Name #>Entity <#= _databaseTable.Name.ToLower() #> = <#= _databaseTable.Name.ToLower() #>Repository.Get<#= _databaseTable.Name #>(entity.<#= _databaseTable.Name #>Id);
+
+                return <#= _databaseTable.Name.ToLower() #>.MapTo<<#= _databaseTable.Name #>ModelResponse>();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+    }
+}
+
+
+<#+
+            return this.GenerationEnvironment.ToString();
+        }
+    }
+#>

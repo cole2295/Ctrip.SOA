@@ -1,0 +1,173 @@
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Web.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Web.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Antlr3.Runtime.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\EntityFramework.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Newtonsoft.Json.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Net.Http.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Net.Http.WebRequest.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.Mvc.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.Optimization.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.Providers.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.Razor.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.WebPages.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\WebGrease.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\EntityFramework.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Newtonsoft.Json.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Net.Http.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Net.Http.WebRequest.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.Mvc.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.Razor.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.WebPages.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Net.Http.resources.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Net.Http.WebRequest.resources.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.Providers.resources.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\obj\Debug\Ctrip.SOA.Web.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\obj\Debug\Ctrip.SOA.Web.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\obj\Debug\Ctrip.SOA.Web.csprojResolveAssemblyReference.cache
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Order.DataContract.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Order.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Order.IBussiness.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Product.DataContract.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Product.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Product.IBusiness.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.User.DataContract.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.User.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.User.IBusiness.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Infratructure.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.Order.IRepository.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.Order.Model.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.User.IRepository.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.User.Model.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.Unity.Interception.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Arch.Data.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.Unity.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Arch.App.Cache.Client.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Unity.Wcf.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Arch.Framework.Utility.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\AutoMapper.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Arch.CFX.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\ChineseConverter.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Framework.Logging.V2.API.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Order.DataContract.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Order.IBussiness.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Order.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Product.DataContract.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Product.IBusiness.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Product.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.User.DataContract.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.User.IBusiness.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.User.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Infratructure.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.Order.IRepository.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.Order.Model.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.User.IRepository.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.User.Model.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.Unity.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Web.dll.config
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\log4net.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Web.dll.config
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Web.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Web.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Antlr3.Runtime.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Order.DataContract.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Order.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Order.IBussiness.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Product.DataContract.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Product.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Product.IBusiness.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.User.DataContract.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.User.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.User.IBusiness.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Infratructure.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\EntityFramework.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\log4net.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Newtonsoft.Json.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Net.Http.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Net.Http.WebRequest.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.Mvc.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.Optimization.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.Providers.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.Razor.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.WebPages.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\WebGrease.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.Order.IRepository.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.Order.Model.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.User.IRepository.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.User.Model.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.Unity.Interception.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Arch.Data.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.Unity.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Arch.App.Cache.Client.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\AutoMapper.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Arch.Framework.Utility.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\ChineseConverter.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Arch.CFX.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Unity.Wcf.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Framework.Logging.V2.API.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Order.DataContract.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Order.IBussiness.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Order.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Product.DataContract.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Product.IBusiness.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.Product.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.User.DataContract.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.User.IBusiness.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Bussiness.User.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Infratructure.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\EntityFramework.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Newtonsoft.Json.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Net.Http.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Net.Http.WebRequest.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.Mvc.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.Razor.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.WebPages.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.Order.IRepository.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.Order.Model.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.User.IRepository.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Ctrip.SOA.Repository.User.Model.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.Unity.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Net.Http.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Net.Http.WebRequest.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.Providers.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\obj\Debug\Ctrip.SOA.Web.csprojResolveAssemblyReference.cache
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\obj\Debug\Ctrip.SOA.Web.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Web\Ctrip.SOA.Web\obj\Debug\Ctrip.SOA.Web.pdb

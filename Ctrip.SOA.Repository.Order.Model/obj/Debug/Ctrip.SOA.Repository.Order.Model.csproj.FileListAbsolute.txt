@@ -1,0 +1,10 @@
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Order.Model\bin\Debug\Ctrip.SOA.Repository.Order.Model.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Order.Model\bin\Debug\Ctrip.SOA.Repository.Order.Model.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Order.Model\obj\Debug\Ctrip.SOA.Repository.Order.Model.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Order.Model\obj\Debug\Ctrip.SOA.Repository.Order.Model.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Order.Model\bin\Debug\Ctrip.SOA.Repository.Order.Model.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Order.Model\bin\Debug\Ctrip.SOA.Repository.Order.Model.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Order.Model\obj\Debug\Ctrip.SOA.Repository.Order.Model.csprojResolveAssemblyReference.cache
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Order.Model\obj\Debug\Ctrip.SOA.Repository.Order.Model.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Order.Model\obj\Debug\Ctrip.SOA.Repository.Order.Model.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Repository.Order.Model\obj\Debug\Ctrip.SOA.Repository.Order.Model.csprojResolveAssemblyReference.cache

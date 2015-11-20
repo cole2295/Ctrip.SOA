@@ -1,0 +1,329 @@
+﻿<#+
+    public class DALTemplate : Template
+    {
+        private DatabaseSchemaReader.DataSchema.DatabaseTable _databaseTable;
+        private ClassGenInfo _dalGenInfo;
+        private ClassGenInfo _entityGenInfo;
+
+        public DALTemplate(ClassGenInfo dalGenInfo, ClassGenInfo entityGenInfo, DatabaseSchemaReader.DataSchema.DatabaseTable databaseTable)
+        {
+            _dalGenInfo = dalGenInfo;
+            _entityGenInfo = entityGenInfo;
+            _databaseTable = databaseTable;
+        }
+
+        private string _className;
+        protected string ClassName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_className))
+                {
+                    _className = _dalGenInfo.GetClassName(_databaseTable.Name);
+                }
+
+                return _className;
+            }
+        }
+
+        private string _entityName;
+        protected string EntityName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_entityName))
+                {
+                    _entityName = _entityGenInfo.GetClassName(_databaseTable.Name);
+                }
+                return _entityName;
+            }
+        }
+
+        private string _tableName;
+        protected string TableName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_tableName))
+                {
+                    _tableName = ClassName.Substring(0, ClassName.Length -_dalGenInfo.NameSuffix.Length);
+                }
+
+                return _tableName;
+            }
+        }
+
+        private string _modelName;
+        protected string ModelName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_modelName))
+                {
+                    _modelName = TableName + "Model";
+                }
+
+                return _modelName;
+            }
+        }
+
+        private string _fileName;
+        public string FileName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_fileName))
+                {
+                    _fileName = ClassName + ".cs";
+                }
+
+                return _fileName;
+            }
+        }
+
+        public override string TransformText()
+        {
+            
+#>
+/* ->
+ * -> 该代码使用工具生成，请勿手动修改 
+ * -> 生成时间： <#= DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") #> 
+ */
+
+using System;
+using System.Collections.Generic;
+using System.Data;
+using Arch.Data;
+using Arch.Data.DbEngine;
+using Arch.Data.Orm;
+using BasicComponents.Consts;
+using BasicComponents.Data;
+using Entity.ProductDB.Entities;
+
+namespace <#= _dalGenInfo.NameSpace #>
+{
+    public class <#= ClassName #> : DalContext
+    {
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        public <#= ClassName #>() : base(DbConsts.SkyseasPrdDb) { }
+        
+        /// <summary>
+        /// 向数据库中插入 <#= _databaseTable.Description ?? TableName #> 实体
+        /// </summary>
+        /// <param name="entity"><#= ModelName #>对象</param>
+        /// <returns>自增主键</returns>
+        public long Insert<#= TableName #>(<#= EntityName #> entity)
+        {
+            var parameters = new StatementParameterCollection();
+            parameters.AddOutParameter("@<#= _databaseTable.PrimaryKeyColumn.Name #>", DbType.Int64, 8);
+            <#+ 
+                foreach(var colSchema in _databaseTable.Columns) 
+                { 
+                    if(colSchema.IsPrimaryKey) continue;
+
+                    string dbTypeString = ColumnSchemaHelper.GetDbTypeString(colSchema);
+                    string objValue = string.Empty;
+                        
+                    if(string.Equals("DataChange_LastTime",colSchema.Name))
+                    {
+                        objValue = "DBNull.Value";
+                    }
+                    else
+                    {
+                        objValue = "entity."+colSchema.Name;
+
+                        if(string.Equals("DbType.Boolean",dbTypeString))
+                        {
+                            objValue = "(object)" + objValue;
+                        }
+                    }
+            #>
+parameters.AddInParameter("@<#= colSchema.Name #>", <#= dbTypeString #>, <#=objValue #>);
+            <#+
+                } 
+            #>
+
+            try
+            {
+                DB.ExecSp("spA_<#= _databaseTable.Name #>_i", parameters);
+                return Convert.ToInt64(parameters["@<#= _databaseTable.PrimaryKeyColumn.Name #>"].Value);
+            }
+            catch (Exception ex)
+            {
+                throw new DalException("调用 <#= ClassName #> 时，访问 Insert<#= TableName #> 时出错", ex);
+            }
+        }
+
+        /// <summary>
+        /// 根据自增主键删除数据库中 <#= _databaseTable.Description ?? TableName #> 实体
+        /// </summary>
+        /// <param name="primaryKey">自增主键</param>
+        public void Delete<#= TableName #>ByPk(long primaryKey)
+        {
+            var parameters = new StatementParameterCollection();
+            parameters.AddInParameter("@<#= _databaseTable.PrimaryKeyColumn.Name #>", DbType.Int64, primaryKey);
+
+            try
+            {
+                DB.ExecSp("spA_<#= _databaseTable.Name #>_d", parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new DalException("调用 <#= ClassName #> 时，访问 Delete<#= TableName #>ByPk  时出错", ex);
+            }
+        }
+        
+        /// <summary>
+        /// 更新<#= _databaseTable.Description ?? TableName #> 实体
+        /// </summary>
+        /// <param name="entity"><#= ModelName #>对象</param>
+        public void Update<#= TableName #>(<#= EntityName #> entity)
+        {
+            var parameters = new StatementParameterCollection();
+            <#+ foreach(var colSchema in _databaseTable.Columns) 
+            { 
+                string dbTypeString = ColumnSchemaHelper.GetDbTypeString(colSchema);
+                string objValue = string.Empty;
+                        
+                if(string.Equals("DataChange_LastTime",colSchema.Name))
+                {
+                    objValue = "DBNull.Value";
+                }
+                else
+                {
+                    objValue = "entity."+colSchema.Name;
+
+                    if(string.Equals("DbType.Boolean",dbTypeString))
+                    {
+                        objValue = "(object)" + objValue;
+                    }
+                }
+            #>parameters.AddInParameter("@<#= colSchema.Name #>", <#= dbTypeString #>, <#=objValue #>);
+            <#+ } #>
+
+            try
+            {
+                DB.ExecSp("spA_<#= _databaseTable.Name #>_u", parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new DalException("调用 <#= ClassName #> 时，访问 Update<#= TableName #> 时出错", ex);
+            }
+        }
+
+        /// <summary>
+        /// 更新时间戳
+        /// </summary>
+        public void UpdateDataChangeLastTime(long id)
+        {
+            var parameters = new StatementParameterCollection();
+            <#+ foreach(var colSchema in _databaseTable.Columns) 
+            { 
+                if(!colSchema.IsPrimaryKey)
+                {
+                    continue;
+                }
+            #>parameters.AddInParameter("@<#= colSchema.Name #>", DbType.Int64, id);
+            parameters.AddInParameter("@DataChange_LastTime", DbType.DateTime, DBNull.Value);
+            <#+ } #>
+
+            try
+            {
+                DB.ExecSp("spA_<#= _databaseTable.Name #>_u", parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new DalException("调用 <#= ClassName #> 时，访问 UpdateDataChangeLastTime 时出错", ex);
+            }
+        }
+
+        /// <summary>
+        /// 根据自增主键获取<#= ModelName #>对象
+        /// </summary>
+        /// <param name="primaryKey">自增主键</param>
+        /// <returns><#= ModelName #>对象</returns>
+        public <#= EntityName #> Get<#= TableName #>ByPk(long primaryKey)
+        {
+            try
+            {
+                return DB.GetByKey<<#= EntityName #>>(primaryKey);
+            }
+            catch (Exception ex)
+            {
+                throw new DalException("调用 <#= ClassName #> 时，访问 FindByPk 时出错", ex);
+            }
+        }
+
+        /// <summary>
+        /// 获取 <#= _databaseTable.Description ?? TableName #> 实体的查询对象
+        /// </summary>
+        public IQuery<<#= EntityName #>> GetQuery()
+        {
+            try
+            {
+                return DB.GetQuery<<#= EntityName #>>();
+            }
+            catch (Exception ex)
+            {
+                throw new DalException("调用 <#= ClassName #> 时，访问 GetQuery 时出错", ex);
+            }
+        }
+
+        /// <summary>
+        /// 根据 <#= _databaseTable.Description ?? TableName #> 实体的查询对象，获取<#= ModelName #>对象
+        /// </summary>
+        /// <param name="query"><#= _databaseTable.Description ?? TableName #> 实体的查询对象</param>
+        /// <returns><#= ModelName #>对象</returns>
+        public <#= EntityName #> Get<#= TableName #>(IQuery<<#= EntityName #>> query)
+        {
+            try
+            {
+                return DB.SelectFirst<<#= EntityName #>>(query);
+            }
+            catch (Exception ex)
+            {
+                throw new DalException("调用 <#= ClassName #> 时，访问Get<#= TableName #>时出错", ex);
+            }
+        }
+
+        /// <summary>
+        /// 根据 <#= _databaseTable.Description ?? TableName #> 实体的查询对象，获取<#= ModelName #>对象列表
+        /// </summary>
+        /// <param name="query"><#= _databaseTable.Description ?? TableName #> 实体的查询对象</param>
+        /// <returns><#= ModelName #>对象列表</returns>
+        public IList<<#= EntityName #>> Get<#= TableName #>List(IQuery<<#= EntityName #>> query)
+        {
+            try
+            {
+                return DB.SelectList<<#= EntityName #>>(query);
+            }
+            catch (Exception ex)
+            {
+                throw new DalException("调用 <#= ClassName #> 时，访问 GetList 时出错", ex);
+            }
+        }
+
+        /// <summary>
+        /// 获取所有<#= ModelName #>对象列表
+        /// </summary>
+        public IList<<#= EntityName #>> GetAll<#= TableName #>List()
+        {
+            try
+            {
+                return DB.GetAll<<#= EntityName #>>();
+            }
+            catch (Exception ex)
+            {
+                throw new DalException("调用 <#= ClassName #> 时，访问GetAll<#= TableName #>List时出错", ex);
+            }
+        }
+    }
+}
+<#+
+
+            return this.GenerationEnvironment.ToString();
+        }
+    }
+#>

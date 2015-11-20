@@ -1,0 +1,215 @@
+2015-11-18 16:19:50
+Application_Error
+未将对象引用设置到对象的实例。
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Ctrip.SOA.Service.User.Global.InitUnity() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 30
+   在 Ctrip.SOA.Service.User.Global.Application_Start(Object sender, EventArgs e) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 19
+2015-11-18 16:20:49
+Application_Error
+未将对象引用设置到对象的实例。
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Ctrip.SOA.Service.User.Global.InitUnity() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 30
+   在 Ctrip.SOA.Service.User.Global.Application_Start(Object sender, EventArgs e) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 19
+2015-11-18 16:23:02
+Application_Error
+未将对象引用设置到对象的实例。
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Ctrip.SOA.Service.User.Global.InitUnity() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 30
+   在 Ctrip.SOA.Service.User.Global.Application_Start(Object sender, EventArgs e) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 19
+2015-11-18 16:26:10
+Application_Error
+只能对 Type.IsGenericParameter 为 True 的类型调用方法。
+System.InvalidOperationException: 只能对 Type.IsGenericParameter 为 True 的类型调用方法。
+   在 System.RuntimeType.get_GenericParameterPosition()
+2015-11-18 16:57:31
+
+WCF异常
+System.InvalidOperationException: 在 ServiceModel 客户端配置部分中，找不到名称“IUserService”和协定“Ctrip.SOA.Bussiness.User.Service.IUserService”的终结点元素。这可能是因为未找到应用程序的配置文件，或者是因为客户端元素中找不到与此名称匹配的终结点元素。
+   在 System.ServiceModel.Description.ConfigLoader.LoadChannelBehaviors(ServiceEndpoint serviceEndpoint, String configurationName)
+   在 System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName, Configuration configuration)
+   在 System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName)
+   在 System.ServiceModel.ChannelFactory.InitializeEndpoint(String configurationName, EndpointAddress address)
+   在 System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName, EndpointAddress remoteAddress)
+   在 System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName)
+   在 Ctrip.SOA.Infratructure.ServiceProxy.ChannelProxy`1.get_Factory() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\ServiceProxy\ChannelProxy.cs:行号 26
+   在 Ctrip.SOA.Infratructure.ServiceProxy.ChannelProxy`1.GetChannel() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\ServiceProxy\ChannelProxy.cs:行号 40
+   在 Ctrip.SOA.Infratructure.ServiceProxy.ServiceProxy`1.Invoke(IMessage msg) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\ServiceProxy\ServiceProxy.cs:行号 24
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Ctrip.SOA.Bussiness.User.Service.IUserService.AddUser(UserModelRequest entity)
+   在 SyncInvokeAddUser(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+2015-11-18 16:58:16
+
+WCF异常
+System.InvalidOperationException: 在 ServiceModel 客户端配置部分中，找不到名称“IUserService”和协定“Ctrip.SOA.Bussiness.User.Service.IUserService”的终结点元素。这可能是因为未找到应用程序的配置文件，或者是因为客户端元素中找不到与此名称匹配的终结点元素。
+   在 System.ServiceModel.Description.ConfigLoader.LoadChannelBehaviors(ServiceEndpoint serviceEndpoint, String configurationName)
+   在 System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName, Configuration configuration)
+   在 System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName)
+   在 System.ServiceModel.ChannelFactory.InitializeEndpoint(String configurationName, EndpointAddress address)
+   在 System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName, EndpointAddress remoteAddress)
+   在 System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName)
+   在 Ctrip.SOA.Infratructure.ServiceProxy.ChannelProxy`1.get_Factory() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\ServiceProxy\ChannelProxy.cs:行号 26
+   在 Ctrip.SOA.Infratructure.ServiceProxy.ChannelProxy`1.GetChannel() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\ServiceProxy\ChannelProxy.cs:行号 40
+   在 Ctrip.SOA.Infratructure.ServiceProxy.ServiceProxy`1.Invoke(IMessage msg) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\ServiceProxy\ServiceProxy.cs:行号 24
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Ctrip.SOA.Bussiness.User.Service.IUserService.AddUser(UserModelRequest entity)
+   在 SyncInvokeAddUser(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+2015-11-18 17:00:56
+
+WCF异常
+System.InvalidOperationException: 在 ServiceModel 客户端配置部分中，找不到名称“IUserService”和协定“Ctrip.SOA.Bussiness.User.Service.IUserService”的终结点元素。这可能是因为未找到应用程序的配置文件，或者是因为客户端元素中找不到与此名称匹配的终结点元素。
+   在 System.ServiceModel.Description.ConfigLoader.LoadChannelBehaviors(ServiceEndpoint serviceEndpoint, String configurationName)
+   在 System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName, Configuration configuration)
+   在 System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName)
+   在 System.ServiceModel.ChannelFactory.InitializeEndpoint(String configurationName, EndpointAddress address)
+   在 System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName, EndpointAddress remoteAddress)
+   在 System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName)
+   在 Ctrip.SOA.Infratructure.ServiceProxy.ChannelProxy`1.get_Factory()
+   在 Ctrip.SOA.Infratructure.ServiceProxy.ChannelProxy`1.GetChannel()
+   在 Ctrip.SOA.Infratructure.ServiceProxy.ServiceProxy`1.Invoke(IMessage msg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Ctrip.SOA.Bussiness.User.Service.IUserService.AddUser(UserModelRequest entity)
+   在 SyncInvokeAddUser(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+2015-11-18 17:01:43
+
+WCF异常
+System.InvalidOperationException: 在 ServiceModel 客户端配置部分中，找不到名称“IUserService”和协定“Ctrip.SOA.Bussiness.User.Service.IUserService”的终结点元素。这可能是因为未找到应用程序的配置文件，或者是因为客户端元素中找不到与此名称匹配的终结点元素。
+   在 System.ServiceModel.Description.ConfigLoader.LoadChannelBehaviors(ServiceEndpoint serviceEndpoint, String configurationName)
+   在 System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName, Configuration configuration)
+   在 System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName)
+   在 System.ServiceModel.ChannelFactory.InitializeEndpoint(String configurationName, EndpointAddress address)
+   在 System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName, EndpointAddress remoteAddress)
+   在 System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName)
+   在 Ctrip.SOA.Infratructure.ServiceProxy.ChannelProxy`1.get_Factory()
+   在 Ctrip.SOA.Infratructure.ServiceProxy.ChannelProxy`1.GetChannel()
+   在 Ctrip.SOA.Infratructure.ServiceProxy.ServiceProxy`1.Invoke(IMessage msg)
+   在 System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   在 Ctrip.SOA.Bussiness.User.Service.IUserService.AddUser(UserModelRequest entity)
+   在 SyncInvokeAddUser(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+2015-11-18 17:47:49
+Application_Error
+Resolution of the dependency failed, type = "Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension", name = "(none)".
+Exception occurred while: while resolving.
+Exception is: InvalidOperationException - The current type, Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory, is an interface and cannot be constructed. Are you missing a type mapping?
+-----------------------------------------------
+At the time of the exception, the container was:
+
+  Resolving Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension,(none)
+  Resolving parameter "instanceFactory" of constructor Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension(Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory instanceFactory)
+    Resolving Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory,(none)
+
+Microsoft.Practices.Unity.ResolutionFailedException: Resolution of the dependency failed, type = "Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension", name = "(none)".
+Exception occurred while: while resolving.
+Exception is: InvalidOperationException - The current type, Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory, is an interface and cannot be constructed. Are you missing a type mapping?
+-----------------------------------------------
+At the time of the exception, the container was:
+
+  Resolving Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension,(none)
+  Resolving parameter "instanceFactory" of constructor Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension(Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory instanceFactory)
+    Resolving Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory,(none)
+ ---> System.InvalidOperationException: The current type, Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory, is an interface and cannot be constructed. Are you missing a type mapping?
+   在 Microsoft.Practices.ObjectBuilder2.DynamicMethodConstructorStrategy.ThrowForAttemptingToConstructInterface(IBuilderContext context)
+   在 BuildUp_Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory(IBuilderContext )
+   在 Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.BuilderContext.NewBuildUp(NamedTypeBuildKey newBuildKey)
+   在 Microsoft.Practices.Unity.ObjectBuilder.NamedTypeDependencyResolverPolicy.Resolve(IBuilderContext context)
+   在 BuildUp_Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension(IBuilderContext )
+   在 Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)
+   在 Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)
+   在 Microsoft.Practices.Unity.UnityContainer.Resolve(Type t, String name, ResolverOverride[] resolverOverrides)
+   在 Microsoft.Practices.Unity.UnityContainerExtensions.Resolve[T](IUnityContainer container, ResolverOverride[] overrides)
+   在 Microsoft.Practices.Unity.UnityContainerExtensions.AddNewExtension[TExtension](IUnityContainer container)
+   在 Ctrip.SOA.Infratructure.Unity.UnityContainerManager.GetContainer(String containerName) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\Unity\UnityContainerManager.cs:行号 48
+   在 Ctrip.SOA.Service.User.Global.InitUnity() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 29
+   在 Ctrip.SOA.Service.User.Global.Application_Start(Object sender, EventArgs e) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 19
+2015-11-18 17:48:32
+Application_Error
+Resolution of the dependency failed, type = "Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension", name = "(none)".
+Exception occurred while: while resolving.
+Exception is: InvalidOperationException - The current type, Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory, is an interface and cannot be constructed. Are you missing a type mapping?
+-----------------------------------------------
+At the time of the exception, the container was:
+
+  Resolving Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension,(none)
+  Resolving parameter "instanceFactory" of constructor Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension(Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory instanceFactory)
+    Resolving Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory,(none)
+
+Microsoft.Practices.Unity.ResolutionFailedException: Resolution of the dependency failed, type = "Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension", name = "(none)".
+Exception occurred while: while resolving.
+Exception is: InvalidOperationException - The current type, Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory, is an interface and cannot be constructed. Are you missing a type mapping?
+-----------------------------------------------
+At the time of the exception, the container was:
+
+  Resolving Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension,(none)
+  Resolving parameter "instanceFactory" of constructor Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension(Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory instanceFactory)
+    Resolving Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory,(none)
+ ---> System.InvalidOperationException: The current type, Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory, is an interface and cannot be constructed. Are you missing a type mapping?
+   在 Microsoft.Practices.ObjectBuilder2.DynamicMethodConstructorStrategy.ThrowForAttemptingToConstructInterface(IBuilderContext context)
+   在 BuildUp_Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory(IBuilderContext )
+   在 Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.BuilderContext.NewBuildUp(NamedTypeBuildKey newBuildKey)
+   在 Microsoft.Practices.Unity.ObjectBuilder.NamedTypeDependencyResolverPolicy.Resolve(IBuilderContext context)
+   在 BuildUp_Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension(IBuilderContext )
+   在 Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)
+   在 Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)
+   在 Microsoft.Practices.Unity.UnityContainer.Resolve(Type t, String name, ResolverOverride[] resolverOverrides)
+   在 Microsoft.Practices.Unity.UnityContainerExtensions.Resolve[T](IUnityContainer container, ResolverOverride[] overrides)
+   在 Microsoft.Practices.Unity.UnityContainerExtensions.AddNewExtension[TExtension](IUnityContainer container)
+   在 Ctrip.SOA.Infratructure.Unity.UnityContainerManager.GetContainer(String containerName) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\Unity\UnityContainerManager.cs:行号 48
+   在 Ctrip.SOA.Service.User.Global.InitUnity() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 29
+   在 Ctrip.SOA.Service.User.Global.Application_Start(Object sender, EventArgs e) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 19

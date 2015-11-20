@@ -1,0 +1,42 @@
+2015-11-19 16:46:28
+Application_Error
+Resolution of the dependency failed, type = "Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension", name = "(none)".
+Exception occurred while: while resolving.
+Exception is: InvalidOperationException - The current type, Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory, is an interface and cannot be constructed. Are you missing a type mapping?
+-----------------------------------------------
+At the time of the exception, the container was:
+
+  Resolving Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension,(none)
+  Resolving parameter "instanceFactory" of constructor Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension(Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory instanceFactory)
+    Resolving Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory,(none)
+
+Microsoft.Practices.Unity.ResolutionFailedException: Resolution of the dependency failed, type = "Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension", name = "(none)".
+Exception occurred while: while resolving.
+Exception is: InvalidOperationException - The current type, Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory, is an interface and cannot be constructed. Are you missing a type mapping?
+-----------------------------------------------
+At the time of the exception, the container was:
+
+  Resolving Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension,(none)
+  Resolving parameter "instanceFactory" of constructor Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension(Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory instanceFactory)
+    Resolving Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory,(none)
+ ---> System.InvalidOperationException: The current type, Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory, is an interface and cannot be constructed. Are you missing a type mapping?
+   在 Microsoft.Practices.ObjectBuilder2.DynamicMethodConstructorStrategy.ThrowForAttemptingToConstructInterface(IBuilderContext context)
+   在 BuildUp_Ctrip.SOA.Infratructure.Unity.ContainerExtensions.IInstanceFactory(IBuilderContext )
+   在 Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.BuilderContext.NewBuildUp(NamedTypeBuildKey newBuildKey)
+   在 Microsoft.Practices.Unity.ObjectBuilder.NamedTypeDependencyResolverPolicy.Resolve(IBuilderContext context)
+   在 BuildUp_Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension(IBuilderContext )
+   在 Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)
+   在 Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)
+   在 Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)
+   在 Microsoft.Practices.Unity.UnityContainer.Resolve(Type t, String name, ResolverOverride[] resolverOverrides)
+   在 Microsoft.Practices.Unity.UnityContainerExtensions.Resolve[T](IUnityContainer container, ResolverOverride[] overrides)
+   在 Microsoft.Practices.Unity.UnityContainerExtensions.AddNewExtension[TExtension](IUnityContainer container)
+   在 Ctrip.SOA.Infratructure.Unity.UnityContainerManager.GetContainer(String containerName) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\Unity\UnityContainerManager.cs:行号 48
+   在 Ctrip.SOA.Service.User.Global.InitUnity() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 29
+   在 Ctrip.SOA.Service.User.Global.Application_Start(Object sender, EventArgs e) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 19

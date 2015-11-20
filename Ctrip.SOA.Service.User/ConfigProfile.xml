@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<profile>
+  <environments>
+    <add name="dev" dataCenter="sh,sh2" target="dev" iis="ALL" net="ALL" />
+    <add name="fat" dataCenter="sh,sh2" target="fat" iis="ALL" net="ALL" />
+    <add name="fws" dataCenter="sh,sh2" target="fws" iis="ALL" net="ALL" />
+    <add name="lpt" dataCenter="sh,sh2" target="lpt" iis="ALL" net="ALL" />
+    <add name="prd" dataCenter="sh,sh2" target="prd" iis="ALL" net="ALL" />
+    <add name="uat_nt" dataCenter="sh,sh2" target="uat_nt" iis="ALL" net="ALL" />
+  </environments>
+  <!--开发环境-->
+  <dev>
+    <AppID>00001</AppID>
+    <ContainerName>Ctrip.SOA.Service.User</ContainerName>
+    <DBDataCenter></DBDataCenter>
+    <UserServiceSvcUrl>http://localhost:2595/UserService.svc</UserServiceSvcUrl>
+  </dev>
+  <!--测试环境-->
+  <fat>
+    <AppID>00001</AppID>
+    <ContainerName>Ctrip.SOA.Service.User</ContainerName>
+    <DBDataCenter></DBDataCenter>
+    <UserServiceSvcUrl>http://localhost:2595/UserService.svc</UserServiceSvcUrl>
+  </fat>
+  <fws>
+    <AppID>00001</AppID>
+    <ContainerName>Ctrip.SOA.Service.User</ContainerName>
+    <DBDataCenter></DBDataCenter>
+    <UserServiceSvcUrl>http://localhost:2595/UserService.svc</UserServiceSvcUrl>
+  </fws>
+  <!--正式环境-->
+  <prd>
+    <AppID>00001</AppID>
+    <ContainerName>Ctrip.SOA.Service.User</ContainerName>
+    <DBDataCenter></DBDataCenter>
+    <UserServiceSvcUrl>http://localhost:2595/UserService.svc</UserServiceSvcUrl>
+  </prd>
+  <uat_nt>
+    <AppID>00001</AppID>
+    <ContainerName>Ctrip.SOA.Service.User</ContainerName>
+    <DBDataCenter></DBDataCenter>
+    <UserServiceSvcUrl>http://localhost:2595/UserService.svc</UserServiceSvcUrl>
+  </uat_nt>
+  <lpt>
+    <AppID>00001</AppID>
+    <ContainerName>Ctrip.SOA.Service.User</ContainerName>
+    <DBDataCenter></DBDataCenter>
+    <UserServiceSvcUrl>http://localhost:2595/UserService.svc</UserServiceSvcUrl>
+  </lpt>
+ 
+</profile>

@@ -1,0 +1,158 @@
+﻿<#+
+    public class RepositoryTemplate : Template
+    {
+        private DatabaseSchemaReader.DataSchema.DatabaseTable _databaseTable;
+        private ClassGenInfo _classGenInfo;
+
+        public RepositoryTemplate(ClassGenInfo classGenInfo, DatabaseSchemaReader.DataSchema.DatabaseTable databaseTable)
+        {
+            _classGenInfo = classGenInfo;
+            _databaseTable = databaseTable;
+        }
+
+        private string _className;
+        protected string ClassName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_className))
+                {
+                    _className = _classGenInfo.GetClassName(_databaseTable.Name);
+                }
+                return _className;
+            }
+        }
+
+        private string _fileName;
+        public string FileName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_fileName))
+                {
+                    _fileName = ClassName + ".cs";
+                }
+
+                return _fileName;
+            }
+        }
+
+        private string _tableName;
+        protected string TableName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_tableName))
+                {
+                    _tableName = ClassName.Substring(0, ClassName.Length -_classGenInfo.NameSuffix.Length);
+                }
+
+                return _tableName;
+            }
+        }
+
+        private string _modelName;
+        protected string ModelName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_modelName))
+                {
+                    _modelName = TableName + "Model";
+                }
+
+                return _modelName;
+            }
+        }
+
+        private string _dalName;
+        protected string DalName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_dalName))
+                {
+                    _dalName = TableName + "Dal";
+                }
+
+                return _dalName;
+            }
+        }
+
+        private string _entityName;
+        protected string EntityName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_entityName))
+                {
+                    _entityName = TableName + "Entity";
+                }
+
+                return _entityName;
+            }
+        }
+
+        public override string TransformText()
+        {
+#>
+/* ->
+* -> 该代码使用工具生成，请勿手动修改 
+* -> 生成时间： <#= DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") #> 
+*/
+
+using Ctrip.SOA.Repository.<#= _databaseTable.Name #>.Model;
+using Ctrip.SOA.Repository.<#= _databaseTable.Name #>.Interface;
+using Ctrip.SOA.Repository.<#= _databaseTable.Name #>.IRepository;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Ctrip.SOA.Repository.<#= _databaseTable.Name #>
+{
+    public class <#= _databaseTable.Name #>Repository: I<#= _databaseTable.Name #>Repository
+    {
+        private readonly I<#= _databaseTable.Name #>InsertDB <#= _databaseTable.Name.ToLower() #>InsertDB;
+        private readonly I<#= _databaseTable.Name #>SelectDB <#= _databaseTable.Name.ToLower() #>SelectDB;
+        public <#= _databaseTable.Name #>Repository(I<#= _databaseTable.Name #>InsertDB <#= _databaseTable.Name.ToLower() #>InsertDB, I<#= _databaseTable.Name #>SelectDB <#= _databaseTable.Name.ToLower() #>SelectDB)
+        {
+            this.<#= _databaseTable.Name.ToLower() #>InsertDB = <#= _databaseTable.Name.ToLower() #>InsertDB;
+            this.<#= _databaseTable.Name.ToLower() #>SelectDB = <#= _databaseTable.Name.ToLower() #>SelectDB;
+        }
+
+        public long Add<#= _databaseTable.Name #>(<#= _databaseTable.Name #>Entity entity)
+        {
+            return <#= _databaseTable.Name.ToLower() #>InsertDB.Insert<#= _databaseTable.Name #>(entity);
+        }
+
+        public bool Update<#= _databaseTable.Name #>(<#= _databaseTable.Name #>Entity entity)
+        {
+            return <#= _databaseTable.Name.ToLower() #>InsertDB.Update<#= _databaseTable.Name #>(entity);
+        }
+
+        public void Delete<#= _databaseTable.Name #>(<#= _databaseTable.Name #>Entity entity)
+        {
+            <#= _databaseTable.Name.ToLower() #>InsertDB.Delete<#= _databaseTable.Name #>(entity);
+        }
+
+        public <#= _databaseTable.Name #>Entity Get<#= _databaseTable.Name #>(long <#= _databaseTable.Name.ToLower() #>Id)
+        {
+            return <#= _databaseTable.Name.ToLower() #>SelectDB.Select<#= _databaseTable.Name #>(<#= _databaseTable.Name.ToLower() #>Id);
+        }
+
+        public List<<#= _databaseTable.Name #>Entity> GetAll<#= _databaseTable.Name #>()
+        {
+            return <#= _databaseTable.Name.ToLower() #>SelectDB.SelectAll<#= _databaseTable.Name #>s();
+        }
+    }
+}
+
+
+<#+
+            return this.GenerationEnvironment.ToString();
+        }
+    }
+#>

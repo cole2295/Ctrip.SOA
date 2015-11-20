@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Ctrip.SOA.Service.User.UserService"
+Factory="Ctrip.SOA.Infratructure.Wcf.WcfServiceHostFactory,Ctrip.SOA.Infratructure" 
+CodeBehind="UserService.svc.cs" %>

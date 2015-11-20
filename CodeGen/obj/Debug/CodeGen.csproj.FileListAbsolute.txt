@@ -1,0 +1,1 @@
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\CodeGen\obj\Debug\CodeGen.csprojResolveAssemblyReference.cache

@@ -1,0 +1,82 @@
+2015-11-17 17:10:15
+Application_Error
+“Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryBuilderStrategy”的类型初始值设定项引发异常。
+System.TypeInitializationException: “Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryBuilderStrategy”的类型初始值设定项引发异常。 ---> System.Configuration.ConfigurationErrorsException: 无法打开 configSource 文件“Config\\Database.Config”。 (C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\web.config line 9)
+   在 System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   在 System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   在 System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   在 System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   在 System.Web.HttpContext.GetSection(String sectionName)
+   在 System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   在 System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   在 System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.SystemConfigurationSource.DoGetSection(String sectionName)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.FileBasedConfigurationSource.GetSection(String sectionName)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSyntheticConfigSettings.GetConnectionStrings()
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSyntheticConfigSettings.<get_Databases>d__0.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSyntheticConfigSettings.<DoGetRegistrations>d__10.MoveNext()
+   在 System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSyntheticConfigSettings.GetRegistrations(IConfigurationSource configurationSource)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeLoadingLocator.<GetRegistrations>b__0(ITypeRegistrationsProvider p, IConfigurationSource cs)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeLoadingLocator.GetRegistrationsInternal(IConfigurationSource configurationSource, Func`3 registrationAccessor)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeLoadingLocator.GetRegistrations(IConfigurationSource configurationSource)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.CompositeTypeRegistrationsProviderLocator.<GetRegistrations>b__0(ITypeRegistrationsProvider l, IConfigurationSource cs)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.CompositeTypeRegistrationsProviderLocator.<>c__DisplayClass5.<GetRegistrationsInternal>b__4(ITypeRegistrationsProvider l)
+   在 System.Linq.Enumerable.<SelectManyIterator>d__1`2.MoveNext()
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.Unity.UnityContainerConfigurator.RegisterAllCore(IConfigurationSource configurationSource, ITypeRegistrationsProvider rootProvider)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.ChangeTrackingContainerConfigurator.RegisterAll(IConfigurationSource configurationSource, ITypeRegistrationsProvider rootProvider)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.EnterpriseLibraryContainer.ConfigureContainer(ITypeRegistrationsProvider locator, IContainerConfigurator configurator, IConfigurationSource configSource)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.EnterpriseLibraryContainer.ConfigureContainer(IContainerConfigurator configurator, IConfigurationSource configSource)
+   在 Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryBuilderStrategy..cctor() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\Unity\ContainerExtensions\InstanceFactoryBuilderStrategy.cs:行号 27
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryBuilderStrategy..ctor(IInstanceFactory instanceFactory)
+   在 Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension.Initialize() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\Unity\ContainerExtensions\InstanceFactoryContainerExtension.cs:行号 40
+   在 Microsoft.Practices.Unity.UnityContainerExtension.InitializeExtension(ExtensionContext context)
+   在 Microsoft.Practices.Unity.UnityContainer.AddExtension(UnityContainerExtension extension)
+   在 Ctrip.SOA.Service.User.Global.InitUnity() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 21
+   在 Ctrip.SOA.Service.User.Global.Application_Start(Object sender, EventArgs e) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 15
+2015-11-17 17:16:42
+Application_Error
+“Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryBuilderStrategy”的类型初始值设定项引发异常。
+System.TypeInitializationException: “Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryBuilderStrategy”的类型初始值设定项引发异常。 ---> System.Configuration.ConfigurationErrorsException: 无法打开 configSource 文件“Config\\Database.Config”。 (C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\web.config line 9)
+   在 System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   在 System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   在 System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   在 System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   在 System.Web.HttpContext.GetSection(String sectionName)
+   在 System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   在 System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   在 System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.SystemConfigurationSource.DoGetSection(String sectionName)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.FileBasedConfigurationSource.GetSection(String sectionName)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSyntheticConfigSettings.GetConnectionStrings()
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSyntheticConfigSettings.<get_Databases>d__0.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSyntheticConfigSettings.<DoGetRegistrations>d__10.MoveNext()
+   在 System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSyntheticConfigSettings.GetRegistrations(IConfigurationSource configurationSource)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeLoadingLocator.<GetRegistrations>b__0(ITypeRegistrationsProvider p, IConfigurationSource cs)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeLoadingLocator.GetRegistrationsInternal(IConfigurationSource configurationSource, Func`3 registrationAccessor)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.TypeLoadingLocator.GetRegistrations(IConfigurationSource configurationSource)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.CompositeTypeRegistrationsProviderLocator.<GetRegistrations>b__0(ITypeRegistrationsProvider l, IConfigurationSource cs)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.CompositeTypeRegistrationsProviderLocator.<>c__DisplayClass5.<GetRegistrationsInternal>b__4(ITypeRegistrationsProvider l)
+   在 System.Linq.Enumerable.<SelectManyIterator>d__1`2.MoveNext()
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.Unity.UnityContainerConfigurator.RegisterAllCore(IConfigurationSource configurationSource, ITypeRegistrationsProvider rootProvider)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ContainerModel.ChangeTrackingContainerConfigurator.RegisterAll(IConfigurationSource configurationSource, ITypeRegistrationsProvider rootProvider)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.EnterpriseLibraryContainer.ConfigureContainer(ITypeRegistrationsProvider locator, IContainerConfigurator configurator, IConfigurationSource configSource)
+   在 Microsoft.Practices.EnterpriseLibrary.Common.Configuration.EnterpriseLibraryContainer.ConfigureContainer(IContainerConfigurator configurator, IConfigurationSource configSource)
+   在 Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryBuilderStrategy..cctor() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\Unity\ContainerExtensions\InstanceFactoryBuilderStrategy.cs:行号 27
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryBuilderStrategy..ctor(IInstanceFactory instanceFactory)
+   在 Ctrip.SOA.Infratructure.Unity.ContainerExtensions.InstanceFactoryContainerExtension.Initialize() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure\Unity\ContainerExtensions\InstanceFactoryContainerExtension.cs:行号 40
+   在 Microsoft.Practices.Unity.UnityContainerExtension.InitializeExtension(ExtensionContext context)
+   在 Microsoft.Practices.Unity.UnityContainer.AddExtension(UnityContainerExtension extension)
+   在 Ctrip.SOA.Service.User.Global.InitUnity() 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 21
+   在 Ctrip.SOA.Service.User.Global.Application_Start(Object sender, EventArgs e) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\Global.asax.cs:行号 15

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ctrip.SOA.Bussiness.User.DataContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ctrip.SOA.Bussiness.User.DataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2595/UserService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Ctrip.SOA.Infratructure.ServiceProxy" />
+  <xs:complexType name="UserModelRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserId" type="xs:long" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserModelRequest" nillable="true" type="tns:UserModelRequest" />
+  <xs:complexType name="UserModelResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Ctrip.SOA.Infratructure.ServiceProxy" base="q1:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UserId" type="xs:long" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserModelResponse" nillable="true" type="tns:UserModelResponse" />
+  <xs:complexType name="ArrayOfUserModelResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserModelResponse" nillable="true" type="tns:UserModelResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserModelResponse" nillable="true" type="tns:ArrayOfUserModelResponse" />
+</xs:schema>

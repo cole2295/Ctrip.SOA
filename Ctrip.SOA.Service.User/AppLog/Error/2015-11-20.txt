@@ -1,0 +1,96 @@
+2015-11-20 14:32:01
+Updateuser error
+UpdateUser
+System.Exception: ddfdfdf
+   在 Ctrip.SOA.Bussiness.User.UserBLL.DeleteUser(UserModelRequest entity) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User\UserBLL.cs:行号 71
+   在 Ctrip.SOA.Service.User.UserService.UpdateUser(UserModelRequest entity) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\UserService.svc.cs:行号 44
+   在 DynamicModule.ns.Wrapped_IUserService_b98a57037afe4053966f4648a6450e76.<UpdateUser_DelegateImplementation>__1(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+2015-11-20 14:32:01
+
+WCF异常
+System.Exception: ddfdfdf
+   在 DynamicModule.ns.Wrapped_IUserService_b98a57037afe4053966f4648a6450e76.UpdateUser(UserModelRequest entity)
+   在 SyncInvokeUpdateUser(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+2015-11-20 14:39:23
+Updateuser error
+UpdateUser
+System.Exception: ddfdfdf
+   在 Ctrip.SOA.Bussiness.User.UserBLL.DeleteUser(UserModelRequest entity) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User\UserBLL.cs:行号 71
+   在 Ctrip.SOA.Service.User.UserService.UpdateUser(UserModelRequest entity) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\UserService.svc.cs:行号 44
+   在 DynamicModule.ns.Wrapped_IUserService_9883d88c304c4fd8973eca629732304d.<UpdateUser_DelegateImplementation>__1(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+2015-11-20 14:39:28
+
+WCF异常
+System.Exception: ddfdfdf
+   在 DynamicModule.ns.Wrapped_IUserService_9883d88c304c4fd8973eca629732304d.UpdateUser(UserModelRequest entity)
+   在 SyncInvokeUpdateUser(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+2015-11-20 14:45:30
+
+UpdateUser
+System.Exception: ddfdfdf
+   在 Ctrip.SOA.Bussiness.User.UserBLL.DeleteUser(UserModelRequest entity) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User\UserBLL.cs:行号 71
+   在 Ctrip.SOA.Service.User.UserService.UpdateUser(UserModelRequest entity) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\UserService.svc.cs:行号 43
+   在 DynamicModule.ns.Wrapped_IUserService_6d54810714754fc4b7e7a11138392b36.<UpdateUser_DelegateImplementation>__1(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+2015-11-20 14:45:34
+
+WCF异常
+System.Exception: ddfdfdf
+   在 DynamicModule.ns.Wrapped_IUserService_6d54810714754fc4b7e7a11138392b36.UpdateUser(UserModelRequest entity)
+   在 SyncInvokeUpdateUser(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+2015-11-20 14:48:11
+
+UpdateUser
+System.Exception: ddfdfdf
+   在 Ctrip.SOA.Bussiness.User.UserBLL.DeleteUser(UserModelRequest entity) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.User\UserBLL.cs:行号 71
+   在 Ctrip.SOA.Service.User.UserService.UpdateUser(UserModelRequest entity) 位置 c:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Service.User\UserService.svc.cs:行号 43
+   在 DynamicModule.ns.Wrapped_IUserService_ff2eeab067c3496e8209046aa270b566.<UpdateUser_DelegateImplementation>__1(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+2015-11-20 14:48:12
+
+WCF异常
+System.Exception: ddfdfdf
+   在 DynamicModule.ns.Wrapped_IUserService_ff2eeab067c3496e8209046aa270b566.UpdateUser(UserModelRequest entity)
+   在 SyncInvokeUpdateUser(Object , Object[] , Object[] )
+   在 System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   在 System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   在 System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)

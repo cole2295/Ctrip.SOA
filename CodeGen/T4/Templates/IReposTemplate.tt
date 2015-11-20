@@ -1,0 +1,121 @@
+﻿<#+
+    public class IReposTemplate : Template
+    {
+        private DatabaseSchemaReader.DataSchema.DatabaseTable _databaseTable;
+        private ClassGenInfo _classGenInfo;
+
+        public IReposTemplate(ClassGenInfo classGenInfo, DatabaseSchemaReader.DataSchema.DatabaseTable databaseTable)
+        {
+            _classGenInfo = classGenInfo;
+            _databaseTable = databaseTable;
+        }
+
+        private string _className;
+        protected string ClassName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_className))
+                {
+                    _className = _classGenInfo.GetClassName(_databaseTable.Name);
+                }
+
+                return _className;
+            }
+        }
+
+        private string _tableName;
+        protected string TableName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_tableName))
+                {
+                    _tableName = ClassName.Substring(_classGenInfo.NamePrefix.Length, ClassName.Length -_classGenInfo.NamePrefix.Length - _classGenInfo.NameSuffix.Length);
+                }
+
+                return _tableName;
+            }
+        }
+
+        private string _modelName;
+        protected string ModelName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_modelName))
+                {
+                    _modelName = TableName + "Model";
+                }
+
+                return _modelName;
+            }
+        }
+
+        private string _entityName;
+        public string EntityName
+        {
+            get
+            {
+                if(string.IsNullOrWhiteSpace(_entityName))
+                {
+                    _entityName = TableName + "Entity";
+                }
+
+                return _entityName;
+            }
+
+        }
+
+        private string _fileName;
+        public string FileName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_fileName))
+                {
+                    _fileName = ClassName + ".cs";
+                }
+
+                return _fileName;
+            }
+        }
+
+        public override string TransformText()
+        {
+#>
+/* ->
+ * -> 该代码使用工具生成，请勿手动修改 
+ * -> 生成时间： <#= DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") #> 
+ */
+
+using Ctrip.SOA.Repository.<#= _databaseTable.Name #>.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ctrip.SOA.Repository.<#= _databaseTable.Name #>.IRepository
+{
+    public interface I<#= _databaseTable.Name #>Repository
+    {
+        long Add<#= _databaseTable.Name #>(<#= _databaseTable.Name #>Entity entity);
+
+        bool Update<#= _databaseTable.Name #>(<#= _databaseTable.Name #>Entity entity);
+
+        void Delete<#= _databaseTable.Name #>(<#= _databaseTable.Name #>Entity entity);
+
+        <#= _databaseTable.Name #>Entity Get<#= _databaseTable.Name #>(long <#= _databaseTable.Name.ToLower() #>Id);
+
+        List<<#= _databaseTable.Name #>Entity> GetAll<#= _databaseTable.Name #>();
+    }
+}
+
+
+<#+
+            return this.GenerationEnvironment.ToString();
+        }
+    }
+#>
+

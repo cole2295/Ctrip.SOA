@@ -1,0 +1,276 @@
+<#@ template language="C#" hostspecific="True" debug="False" #>
+<#@ output extension="txt" #>
+
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="System.Xml.Linq" #>
+<#@ assembly name="$(SolutionDir)\DLL\DatabaseSchemaReader.dll" #>
+
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Diagnostics" #>
+
+<#@ include file="T4Toolbox.tt" #>
+<#@ include file="Common.tt" #>
+<#@ include file="Templates\EntityTemplate.tt" #>
+<#@ include file="Templates\IReposTemplate.tt" #>
+<#@ include file="Templates\DALTemplate.tt" #>
+<#@ include file="Templates\RepositoryTemplate.tt" #>
+<#@ include file="Templates\IBusinessTemplate.tt" #>
+<#@ include file="Templates\BusinessTemplate.tt" #>
+<#@ include file="Templates\STDTemplate.tt" #>
+<#@ include file="Templates\ServiceTemplate.tt" #>
+<#@ include file="Templates\STDTypeTemplate.tt" #>
+<#@ include file="Templates\Procedure.tt" #>
+<#@ include file="Templates\InsertDBTemplate.tt" #>
+<#@ include file="Templates\SelectDBTemplate.tt" #>
+<#
+    var connectionStringName = "Test_InsertDB";
+    var databaseSchema = GetDatabaseSchema(connectionStringName);
+    //生成代码的领域名称（命名空间）
+    var domain="Order";
+    // 项目路径
+    var projectPath = GetProjectPath();
+
+    // 输出实体的一些配置信息
+    var entityOutputPath = projectPath + @"\Entities";
+    var entityGenInfo = new ClassGenInfo();
+    entityGenInfo.NameTrimStart = "COM_";
+    entityGenInfo.NameSuffix = "Entity";
+    entityGenInfo.NameSpace = String.Format("Ctrip.SOA.Repository.{0}.Model",domain);
+    RenderEntities(entityOutputPath, entityGenInfo, databaseSchema);
+    
+    //// 输出 DAL 的一些配置信息
+    var dalOutputPath = projectPath + @"\DAL";
+    var dalGenInfo = new ClassGenInfo();
+    dalGenInfo.NameTrimStart = "COM_";
+    dalGenInfo.NameSuffix = "Dal";
+    dalGenInfo.NameSpace = String.Format("Ctrip.SOA.Repository.{0}.DAL",domain);
+    RenderDals(dalOutputPath, dalGenInfo,entityGenInfo,  databaseSchema);
+
+    //// 输出 IRepos 的一些配置信息
+    var iReposOutputPath = projectPath + @"\IRepos";
+    var iReposGenInfo = new ClassGenInfo();
+    iReposGenInfo.NameTrimStart = "COM_;_del_";
+    iReposGenInfo.NamePrefix = "I";
+    iReposGenInfo.NameSuffix = "Repository";
+    iReposGenInfo.NameSpace = String.Format("Ctrip.SOA.Repository.{0}.IRepository",domain);
+    RenderIRepos(iReposOutputPath, iReposGenInfo, databaseSchema);
+//
+    //// 输出 Repository 的一些配置信息
+    var repositoryOutputPath =  projectPath + @"\Repositories";
+    var repositoryGenInfo = new ClassGenInfo();
+    repositoryGenInfo.NameTrimStart = "COM_;_del_";
+    repositoryGenInfo.NameSuffix = "Repository";
+    repositoryGenInfo.NameSpace = String.Format("Ctrip.SOA.Repository.{0}",domain);
+    RenderRepositories(repositoryOutputPath, repositoryGenInfo, databaseSchema);
+//
+    ////输出 IBusiness 的一些配置信息
+    var iBusinessOutputPath = projectPath + @"\IBusiness";
+    var iBusinessGenInfo = new ClassGenInfo();
+    iBusinessGenInfo.NameTrimStart = "COM_;_del_";
+    iBusinessGenInfo.NamePrefix = "I";
+    iBusinessGenInfo.NameSuffix = "BLL";
+    iBusinessGenInfo.NameSpace = String.Format("Ctrip.SOA.Bussiness.{0}.IBussiness",domain);
+    RenderIBusiness(iBusinessOutputPath, iBusinessGenInfo, databaseSchema);
+//
+    //// 输出 Business 的一些配置信息
+    var businessOutputPath = projectPath + @"\Business";
+    var businessGenInfo = new ClassGenInfo();
+    businessGenInfo.NameTrimStart = "COM_;_del_";
+    businessGenInfo.NameSuffix = "BLL";
+    businessGenInfo.NameSpace = String.Format("Ctrip.SOA.Bussiness.{0}",domain);
+    RenderBusiness(businessOutputPath, businessGenInfo, databaseSchema);
+
+	 //// 输出 procedure 的一些配置信息
+    var ProcedurePath = projectPath + @"\Procedure";
+    var procedureGenInfo = new ClassGenInfo();
+    RenderProcedure(ProcedurePath, procedureGenInfo, databaseSchema);
+
+	var InsertDBPath = projectPath + @"\InsertDB";
+    var InsertDBGenInfo = new ClassGenInfo();
+    RenderInsertDB(InsertDBPath, InsertDBGenInfo, databaseSchema);
+
+	var SelectDBPath = projectPath + @"\SelectDB";
+    var SelectDBGenInfo = new ClassGenInfo();
+    RenderSelectDB(SelectDBPath, SelectDBGenInfo, databaseSchema);
+
+    // 输出 STD 的一些配置信息
+    var sTDOutputPath = projectPath + @"\STDs";
+    var sTDGenInfo = new ClassGenInfo();
+    sTDGenInfo.NameTrimStart = "COM_";
+    //RenderSTDs(sTDOutputPath,sTDGenInfo, databaseSchema);
+   
+    // 输出 Servie 的一些配置信息
+    var serviceOutputPath = projectPath + @"\Servies";
+    var serviceGenInfo = new ClassGenInfo();
+    serviceGenInfo.NameTrimStart = "COM_";
+    serviceGenInfo.NameSpace = String.Format("Ctrip.SOA.Service.{0}",domain); 
+    //RenderServices(serviceOutputPath,serviceGenInfo, databaseSchema);
+
+    // 输出TSD实体
+    var sTDTypeOutputPath = projectPath + @"\STDType";
+    var sTDTypeGenInfo = new ClassGenInfo();
+    sTDTypeGenInfo.NameTrimStart = "COM_";
+    //RenderSTDType(sTDTypeOutputPath, sTDTypeGenInfo, databaseSchema);
+#>
+Last Running Date : <#=        DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") #>
+<#+
+    public DatabaseSchemaReader.DataSchema.DatabaseSchema GetDatabaseSchema(string connectionStringName)
+    {
+        var connectionStringFile = @"D:\WebSites\CtripAppData\Database.Config";
+        var reader = new ConnectionStringReader(connectionStringFile);
+        var connectionStringInfo = reader.GetConnectionString(connectionStringName);
+
+        var dbReader = new DatabaseSchemaReader.DatabaseReader(connectionStringInfo.ConnectionString, 
+            connectionStringInfo.ProviderName);
+        return dbReader.ReadAll();
+        return null;
+    }
+
+    public string GetProjectPath()
+    {
+        var currentPath = Path.GetDirectoryName(Host.TemplateFile);
+        return currentPath+"\\Codes";
+    }
+
+    // 渲染实体类生成
+    public void RenderEntities(string outputPath, ClassGenInfo genInfo, DatabaseSchemaReader.DataSchema.DatabaseSchema databaseSchema)
+    {
+        foreach(var tableSchema in databaseSchema.Tables)
+        {
+            var entityTemplate = new EntityTemplate(genInfo, tableSchema);
+            entityTemplate.Output.Encoding = System.Text.Encoding.UTF8;
+            entityTemplate.RenderToFile(outputPath + "\\" + entityTemplate.FileName);
+        }
+    }
+
+    // 渲染 IRepos 类生成
+    public void RenderIRepos(string outputPath, ClassGenInfo genInfo, DatabaseSchemaReader.DataSchema.DatabaseSchema databaseSchema)
+    {
+        foreach(var tableSchema in databaseSchema.Tables)
+        {
+            var iReposTemplate = new IReposTemplate(genInfo, tableSchema);
+            iReposTemplate.Output.Encoding = System.Text.Encoding.UTF8;
+            iReposTemplate.RenderToFile(outputPath + "\\" + iReposTemplate.FileName);
+        }
+    }
+
+    // 渲染 DAL 类生成
+    public void RenderDals(string outputPath, ClassGenInfo dalGenInfo, ClassGenInfo entityGenInfo, DatabaseSchemaReader.DataSchema.DatabaseSchema databaseSchema)
+    {
+        foreach(var tableSchema in databaseSchema.Tables)
+        {
+            var dalTemplate = new DALTemplate(dalGenInfo, entityGenInfo, tableSchema);
+            dalTemplate.Output.Encoding = System.Text.Encoding.UTF8;
+            dalTemplate.RenderToFile(outputPath + "\\" + dalTemplate.FileName);
+        }
+    }
+
+    // 渲染 Repository 类生成
+    public void RenderRepositories(string outputPath, ClassGenInfo repositoryGenInfo, DatabaseSchemaReader.DataSchema.DatabaseSchema databaseSchema)
+    {
+        foreach(var tableSchema in databaseSchema.Tables)
+        {
+            var repositoryTemplate = new RepositoryTemplate(repositoryGenInfo, tableSchema);
+            repositoryTemplate.Output.Encoding = System.Text.Encoding.UTF8;
+            repositoryTemplate.Output.PreserveExistingFile = true;
+            repositoryTemplate.RenderToFile(outputPath + "\\" + repositoryTemplate.FileName);
+        }
+    }
+
+    // 渲染 IBusiness 类生成
+    public void RenderIBusiness(string outputPath, ClassGenInfo genInfo, DatabaseSchemaReader.DataSchema.DatabaseSchema databaseSchema)
+    {
+        foreach(var tableSchema in databaseSchema.Tables)
+        {
+            var iBusinessTemplate = new IBusinessTemplate(genInfo, tableSchema);
+            iBusinessTemplate.Output.Encoding = System.Text.Encoding.UTF8;
+            iBusinessTemplate.RenderToFile(outputPath + "\\" + iBusinessTemplate.FileName);
+        }
+    }
+
+    // 渲染 Business 类生成
+    public void RenderBusiness(string outputPath, ClassGenInfo genInfo, DatabaseSchemaReader.DataSchema.DatabaseSchema databaseSchema)
+    {
+        foreach(var tableSchema in databaseSchema.Tables)
+        {
+            var businessTemplate = new BusinessTemplate(genInfo, tableSchema);
+            businessTemplate.Output.Encoding = System.Text.Encoding.UTF8;
+            businessTemplate.RenderToFile(outputPath + "\\" + businessTemplate.FileName);
+        }
+    }
+
+	 // 渲染 Procedure 类生成
+    public void RenderProcedure(string outputPath, ClassGenInfo genInfo, DatabaseSchemaReader.DataSchema.DatabaseSchema databaseSchema)
+    {
+        foreach(var tableSchema in databaseSchema.Tables)
+        {
+            var procedureTemplate = new ProcedureTemplate(genInfo, tableSchema);
+            procedureTemplate.Output.Encoding = System.Text.Encoding.UTF8;
+            procedureTemplate.RenderToFile(outputPath + "\\" + procedureTemplate.FileName);
+        }
+    }
+
+	 // 渲染 InsertDb 类生成
+    public void RenderInsertDB(string outputPath, ClassGenInfo genInfo, DatabaseSchemaReader.DataSchema.DatabaseSchema databaseSchema)
+    {
+        foreach(var tableSchema in databaseSchema.Tables)
+        {
+            var InsertDBTemplate = new InsertDBTemplate(genInfo, tableSchema);
+            InsertDBTemplate.Output.Encoding = System.Text.Encoding.UTF8;
+            InsertDBTemplate.RenderToFile(outputPath + "\\" + InsertDBTemplate.FileName);
+        }
+    }
+
+		 // 渲染 InsertDb 类生成
+    public void RenderSelectDB(string outputPath, ClassGenInfo genInfo, DatabaseSchemaReader.DataSchema.DatabaseSchema databaseSchema)
+    {
+        foreach(var tableSchema in databaseSchema.Tables)
+        {
+            var SelectDBTemplate = new SelectDBTemplate(genInfo, tableSchema);
+            SelectDBTemplate.Output.Encoding = System.Text.Encoding.UTF8;
+            SelectDBTemplate.RenderToFile(outputPath + "\\" + SelectDBTemplate.FileName);
+        }
+    }
+
+    // 渲染 STD 类生成
+    public void RenderSTDs(string outputPath, ClassGenInfo genInfo,DatabaseSchemaReader.DataSchema.DatabaseSchema databaseSchema)
+    {
+        foreach(var tableSchema in databaseSchema.Tables)
+        {
+            var sTDTemplate = new STDTemplate(genInfo,tableSchema);
+            sTDTemplate.Output.Encoding = System.Text.Encoding.UTF8;
+            sTDTemplate.RenderToFile(outputPath + "\\" + sTDTemplate.FileName);
+        }
+    }
+
+    // 渲染 Service 类生成
+    public void RenderServices(string outputPath, ClassGenInfo genInfo,DatabaseSchemaReader.DataSchema.DatabaseSchema databaseSchema)
+    {
+        foreach(var tableSchema in databaseSchema.Tables)
+        {
+            var serviceTemplate = new ServiceTemplate(genInfo,tableSchema);
+            serviceTemplate.Output.Encoding = System.Text.Encoding.UTF8;
+            serviceTemplate.RenderToFile(outputPath + "\\" + serviceTemplate.FileName);
+        }
+    }
+
+      // std实体
+    public void RenderSTDType(string outputPath, ClassGenInfo genInfo, DatabaseSchemaReader.DataSchema.DatabaseSchema databaseSchema)
+    {
+        foreach(var tableSchema in databaseSchema.Tables)
+        {
+            var sTDTypeTemplate = new STDTypeTemplate(genInfo, tableSchema);
+            sTDTypeTemplate.Output.Encoding = System.Text.Encoding.UTF8;
+            sTDTypeTemplate.RenderToFile(outputPath + "\\" + sTDTypeTemplate.FileName);
+        }
+    }
+#>
+

@@ -1,0 +1,413 @@
+USE [test]
+GO
+/****** Object:  StoredProcedure [dbo].[spA_User_u]    Script Date: 2015/11/20 15:34:06 ******/
+DROP PROCEDURE [dbo].[spA_User_u]
+GO
+/****** Object:  StoredProcedure [dbo].[spA_User_i]    Script Date: 2015/11/20 15:34:06 ******/
+DROP PROCEDURE [dbo].[spA_User_i]
+GO
+/****** Object:  StoredProcedure [dbo].[spA_User_d]    Script Date: 2015/11/20 15:34:06 ******/
+DROP PROCEDURE [dbo].[spA_User_d]
+GO
+/****** Object:  StoredProcedure [dbo].[spA_Order_u]    Script Date: 2015/11/20 15:34:06 ******/
+DROP PROCEDURE [dbo].[spA_Order_u]
+GO
+/****** Object:  StoredProcedure [dbo].[spA_Order_i]    Script Date: 2015/11/20 15:34:06 ******/
+DROP PROCEDURE [dbo].[spA_Order_i]
+GO
+/****** Object:  StoredProcedure [dbo].[spA_Order_d]    Script Date: 2015/11/20 15:34:06 ******/
+DROP PROCEDURE [dbo].[spA_Order_d]
+GO
+ALTER TABLE [dbo].[Product] DROP CONSTRAINT [DF_Product_UpdateTime]
+GO
+ALTER TABLE [dbo].[Product] DROP CONSTRAINT [DF_Product_CreateTime]
+GO
+ALTER TABLE [dbo].[Order] DROP CONSTRAINT [DF_Order_UpdateTime]
+GO
+ALTER TABLE [dbo].[Order] DROP CONSTRAINT [DF_Order_CreateTime]
+GO
+/****** Object:  Table [dbo].[User]    Script Date: 2015/11/20 15:34:06 ******/
+DROP TABLE [dbo].[User]
+GO
+/****** Object:  Table [dbo].[Product]    Script Date: 2015/11/20 15:34:06 ******/
+DROP TABLE [dbo].[Product]
+GO
+/****** Object:  Table [dbo].[Order]    Script Date: 2015/11/20 15:34:06 ******/
+DROP TABLE [dbo].[Order]
+GO
+/****** Object:  Table [dbo].[Order]    Script Date: 2015/11/20 15:34:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Order](
+	[OrderId] [bigint] IDENTITY(1,1) NOT NULL,
+	[UserId] [bigint] NOT NULL,
+	[Name] [nvarchar](128) NOT NULL,
+	[Price] [decimal](18, 2) NOT NULL,
+	[ProductId] [bigint] NULL,
+	[CreateTime] [datetime] NOT NULL,
+	[UpdateTime] [datetime] NULL,
+ CONSTRAINT [PK_Order] PRIMARY KEY CLUSTERED 
+(
+	[OrderId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Product]    Script Date: 2015/11/20 15:34:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Product](
+	[ProductId] [bigint] IDENTITY(1,1) NOT NULL,
+	[ProductName] [nvarchar](128) NOT NULL,
+	[CreateTime] [datetime] NOT NULL,
+	[UpdateTime] [datetime] NULL,
+ CONSTRAINT [PK_Product] PRIMARY KEY CLUSTERED 
+(
+	[ProductId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[User]    Script Date: 2015/11/20 15:34:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[User](
+	[UserId] [bigint] IDENTITY(1,1) NOT NULL,
+	[UserName] [nvarchar](48) NOT NULL,
+	[CreateTime] [datetime] NOT NULL CONSTRAINT [DF_User_CreateTime]  DEFAULT (getdate()),
+	[UpdateTime] [datetime] NULL CONSTRAINT [DF_User_UpdateTime]  DEFAULT (getdate()),
+ CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED 
+(
+	[UserId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET IDENTITY_INSERT [dbo].[User] ON 
+
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (2, N'dddd', CAST(N'2015-10-20 16:26:25.910' AS DateTime), CAST(N'2015-10-20 16:26:25.910' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (3, N'dddd', CAST(N'2015-10-20 16:27:44.363' AS DateTime), CAST(N'2015-10-20 16:27:44.363' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (4, N'dddd', CAST(N'2015-10-20 16:28:13.340' AS DateTime), CAST(N'2015-10-20 16:28:13.340' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (5, N'dddd', CAST(N'2015-10-20 16:32:40.993' AS DateTime), CAST(N'2015-10-20 16:32:40.993' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (6, N'11111', CAST(N'2015-10-20 16:38:13.203' AS DateTime), CAST(N'2015-10-20 16:38:13.203' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (7, N'11111', CAST(N'2015-10-20 16:38:27.823' AS DateTime), CAST(N'2015-10-20 16:38:27.823' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (8, N'3333333333333333', CAST(N'2015-10-20 16:39:48.143' AS DateTime), CAST(N'2015-11-20 14:42:50.007' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (10011, N'4444', CAST(N'2015-11-17 15:57:52.233' AS DateTime), CAST(N'2015-11-17 15:57:52.233' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (10012, N'44446666', CAST(N'2015-11-17 15:58:03.687' AS DateTime), CAST(N'2015-11-17 15:58:03.687' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (10013, N'eee', CAST(N'2015-11-17 16:39:00.303' AS DateTime), CAST(N'2015-11-17 16:39:00.303' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (10014, N'dddd', CAST(N'2015-11-17 16:43:50.043' AS DateTime), CAST(N'2015-11-17 16:43:50.043' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (10015, N'dddd', CAST(N'2015-11-17 16:46:19.653' AS DateTime), CAST(N'2015-11-17 16:46:19.653' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (10016, N'dddd', CAST(N'2015-11-17 16:47:11.307' AS DateTime), CAST(N'2015-11-17 16:47:11.307' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (10017, N'dddd', CAST(N'2015-11-17 16:47:52.157' AS DateTime), CAST(N'2015-11-17 16:47:52.157' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (10018, N'dddd', CAST(N'2015-11-17 16:53:31.137' AS DateTime), CAST(N'2015-11-17 16:53:31.137' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (10019, N'dddd', CAST(N'2015-11-17 17:19:08.147' AS DateTime), CAST(N'2015-11-17 17:19:08.147' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (10020, N'dddd', CAST(N'2015-11-17 17:35:57.823' AS DateTime), CAST(N'2015-11-17 17:35:57.823' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (10021, N'dddd', CAST(N'2015-11-17 17:44:52.067' AS DateTime), CAST(N'2015-11-17 17:44:52.067' AS DateTime))
+GO
+INSERT [dbo].[User] ([UserId], [UserName], [CreateTime], [UpdateTime]) VALUES (10022, N'dddd', CAST(N'2015-11-20 13:56:19.037' AS DateTime), CAST(N'2015-11-20 13:56:19.037' AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[User] OFF
+GO
+ALTER TABLE [dbo].[Order] ADD  CONSTRAINT [DF_Order_CreateTime]  DEFAULT (getdate()) FOR [CreateTime]
+GO
+ALTER TABLE [dbo].[Order] ADD  CONSTRAINT [DF_Order_UpdateTime]  DEFAULT (getdate()) FOR [UpdateTime]
+GO
+ALTER TABLE [dbo].[Product] ADD  CONSTRAINT [DF_Product_CreateTime]  DEFAULT (getdate()) FOR [CreateTime]
+GO
+ALTER TABLE [dbo].[Product] ADD  CONSTRAINT [DF_Product_UpdateTime]  DEFAULT (getdate()) FOR [UpdateTime]
+GO
+/****** Object:  StoredProcedure [dbo].[spA_Order_d]    Script Date: 2015/11/20 15:34:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+  CREATE PROCEDURE [dbo].[spA_Order_d]  
+  
+                  @OrderId bigint  
+                  AS  
+                  DECLARE @retcode int, @rowcount int   
+                  SET LOCK_TIMEOUT 1000  
+                  DELETE [Order] WHERE [OrderId]=@OrderId                
+  
+                    
+                  SELECT @retcode = @@ERROR, @rowcount = @@ROWCOUNT  
+                  IF @retcode = 0 AND @rowcount = 0  
+                  BEGIN   
+                    SELECT 100  
+                    RETURN 100  
+                  END   
+                  ELSE  
+                  BEGIN   
+       SELECT @retcode  
+       RETURN @retcode  
+                  END   
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[spA_Order_i]    Script Date: 2015/11/20 15:34:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+  CREATE PROCEDURE [dbo].[spA_Order_i]  
+
+    
+  
+                         	    
+		@OrderId bigint output,
+
+	               
+                         	      @UserId bigint    , 
+	               
+                         	      @Name nvarchar (128)   , 
+	               
+                         	      @Price decimal    , 
+	               
+                         	      @ProductId bigint    , 
+	               
+                         	      @CreateTime datetime    , 
+	               
+                         	      @UpdateTime datetime   
+	               			   AS  
+           DECLARE @retcode int, @rowcount int ,@identity bigint
+           SET LOCK_TIMEOUT 1000  
+          INSERT INTO [dbo].[Order]
+           (
+		                                                                  		[UserId]  , 	
+	                                        		[Name]  , 	
+	                                        		[Price]  , 	
+	                                        		[ProductId]  , 	
+	                                        		[CreateTime]  , 	
+	                                        		[UpdateTime] 	
+	               
+			)
+			VALUES
+			(
+			                             	 
+                                     		@UserId  , 	   	 
+                                     		@Name  , 	   	 
+                                     		@Price  , 	   	 
+                                     		@ProductId  , 	   	 
+                                     		@CreateTime  , 	   	 
+                                     		@UpdateTime 	   	 
+            			)
+
+           SELECT @retcode = @@ERROR, @rowcount = @@ROWCOUNT  ,@identity = @@IDENTITY
+           IF @retcode = 0 AND @rowcount = 0  
+            BEGIN   
+                    SELECT 100  
+                    RETURN 100  
+            END   
+            ELSE  
+            BEGIN   
+			set @OrderId = @identity
+			SELECT @retcode  
+			RETURN @retcode  
+
+            END  
+
+
+	
+
+GO
+/****** Object:  StoredProcedure [dbo].[spA_Order_u]    Script Date: 2015/11/20 15:34:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+   CREATE PROCEDURE [dbo].[spA_Order_u]  
+   
+		  @OrderId bigint    , 
+            
+		  @UserId bigint    , 
+            
+		  @Name nvarchar (128)   , 
+            
+		  @Price decimal    , 
+            
+		  @ProductId bigint    , 
+            
+		  @CreateTime datetime    , 
+            
+		  @UpdateTime datetime   
+                                
+              AS  
+			  DECLARE @retcode int, @rowcount int  
+              SET LOCK_TIMEOUT 1000  
+             UPDATE [dbo].[Order]
+             SET 
+
+			    			            						[UserId] = ISNULL(@UserId ,[UserId]) , 		
+		                 						[Name] = ISNULL(@Name ,[Name]) , 		
+		                 						[Price] = ISNULL(@Price ,[Price]) , 		
+		                 						[ProductId] = ISNULL(@ProductId ,[ProductId]) , 		
+		                 						[CreateTime] = ISNULL(@CreateTime ,[CreateTime]) , 		
+		                 						[UpdateTime] = ISNULL(@UpdateTime ,[UpdateTime])		
+		                 
+			WHERE OrderId=@OrderId
+
+			  SELECT @retcode = @@ERROR, @rowcount = @@ROWCOUNT  
+              IF @retcode = 0 AND @rowcount = 0  
+              BEGIN   
+     SELECT 100  
+                    RETURN 100  
+              END   
+              ELSE  
+              BEGIN   
+     SELECT @retcode  
+     RETURN @retcode  
+              END  
+
+GO
+/****** Object:  StoredProcedure [dbo].[spA_User_d]    Script Date: 2015/11/20 15:34:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+  CREATE PROCEDURE [dbo].[spA_User_d]  
+  
+                  @UserId bigint  
+                  AS  
+                  DECLARE @retcode int, @rowcount int   
+                  SET LOCK_TIMEOUT 1000  
+                  DELETE [User] WHERE [UserId]=@UserId                
+  
+                    
+                  SELECT @retcode = @@ERROR, @rowcount = @@ROWCOUNT  
+                  IF @retcode = 0 AND @rowcount = 0  
+                  BEGIN   
+                    SELECT 100  
+                    RETURN 100  
+                  END   
+                  ELSE  
+                  BEGIN   
+       SELECT @retcode  
+       RETURN @retcode  
+                  END   
+
+
+GO
+/****** Object:  StoredProcedure [dbo].[spA_User_i]    Script Date: 2015/11/20 15:34:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+  CREATE PROCEDURE [dbo].[spA_User_i]  
+
+    
+  
+                         	    
+		@UserId bigint output,
+
+	               
+                         	      @UserName nvarchar (48)   , 
+	               
+                         	      @CreateTime datetime    , 
+	               
+                         	      @UpdateTime datetime   
+	               			   AS  
+           DECLARE @retcode int, @rowcount int ,@identity bigint
+           SET LOCK_TIMEOUT 1000  
+          INSERT INTO [dbo].[User]
+           (
+		                                                                  		[UserName]  , 	
+	                                        		[CreateTime]  , 	
+	                                        		[UpdateTime] 	
+	               
+			)
+			VALUES
+			(
+			                             	 
+                                     		@UserName  , 	   	 
+                                     		@CreateTime  , 	   	 
+                                     		@UpdateTime 	   	 
+            			)
+
+           SELECT @retcode = @@ERROR, @rowcount = @@ROWCOUNT  ,@identity = @@IDENTITY
+           IF @retcode = 0 AND @rowcount = 0  
+            BEGIN   
+                    SELECT 100  
+                    RETURN 100  
+            END   
+            ELSE  
+            BEGIN   
+			set @UserId = @identity
+			SELECT @retcode  
+			RETURN @retcode  
+
+            END  
+
+
+	
+
+GO
+/****** Object:  StoredProcedure [dbo].[spA_User_u]    Script Date: 2015/11/20 15:34:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+   CREATE PROCEDURE [dbo].[spA_User_u]  
+   
+		  @UserId bigint    , 
+            
+		  @UserName nvarchar (48)   , 
+            
+		  @CreateTime datetime    , 
+            
+		  @UpdateTime datetime   
+                                
+              AS  
+			  DECLARE @retcode int, @rowcount int  
+              SET LOCK_TIMEOUT 1000  
+             UPDATE [dbo].[User]
+             SET 
+
+			    			            						[UserName] = ISNULL(@UserName ,[UserName]) , 		
+		                 						[CreateTime] = ISNULL(@CreateTime ,[CreateTime]) , 		
+		                 						[UpdateTime] = ISNULL(@UpdateTime ,[UpdateTime])		
+		                 
+			WHERE UserId=@UserId
+
+			  SELECT @retcode = @@ERROR, @rowcount = @@ROWCOUNT  
+              IF @retcode = 0 AND @rowcount = 0  
+              BEGIN   
+     SELECT 100  
+                    RETURN 100  
+              END   
+              ELSE  
+              BEGIN   
+     SELECT @retcode  
+     RETURN @retcode  
+              END  
+
+GO

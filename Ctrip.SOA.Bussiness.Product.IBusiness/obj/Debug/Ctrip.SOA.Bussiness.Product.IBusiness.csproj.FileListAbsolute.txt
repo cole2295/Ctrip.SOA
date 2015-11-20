@@ -1,0 +1,9 @@
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.IBusiness\bin\Debug\Ctrip.SOA.Bussiness.Product.IBusiness.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.IBusiness\bin\Debug\Ctrip.SOA.Bussiness.Product.IBusiness.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.IBusiness\obj\Debug\Ctrip.SOA.Bussiness.Product.IBusiness.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.IBusiness\obj\Debug\Ctrip.SOA.Bussiness.Product.IBusiness.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.IBusiness\bin\Debug\Ctrip.SOA.Bussiness.Product.IBusiness.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.IBusiness\bin\Debug\Ctrip.SOA.Bussiness.Product.IBusiness.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.IBusiness\obj\Debug\Ctrip.SOA.Bussiness.Product.IBusiness.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.IBusiness\obj\Debug\Ctrip.SOA.Bussiness.Product.IBusiness.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.IBusiness\obj\Debug\Ctrip.SOA.Bussiness.Product.IBusiness.csprojResolveAssemblyReference.cache

@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container" ng-controller="usercontroller"  style="margin-left: 10px; margin: 0px;">
+    <div style="margin-top: 10px; margin-bottom: 10px;">
+        <button type="button" class="btn btn-sm btn-success" ng-click="showAddDiv()">
+            AddNew+</button></div>
+    <div style="width: 30%;" ng-show="showadd">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    添加用户</h3>
+            </div>
+            <div class="panel-body">
+                <div>
+                    <span>用户名:</span><input type="text" name="username" ng-model="userName" /></div>
+                <div style="text-align: center; margin-top: 10px">
+                    <button type="button" class="btn btn-sm btn-info" ng-click="AddUser()">
+                        保存</button></div>
+            </div>
+        </div>
+    </div>
+    <div style="width: 30%;" ng-show="showupdate">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    更新用户</h3>
+            </div>
+            <div class="panel-body">
+                            <div>
+                   <span>用户ID:</span><input type="text" name="UserId" ng-model="user.userId"  readonly="readonly"/></div>
+                <div>
+                    <span>用户名:</span><input type="text" name="username" ng-model="user.userName" /></div>
+                <div style="text-align: center; margin-top: 10px">
+                    <button type="button" class="btn btn-sm btn-info" ng-click="EditUser(user)">
+                        保存</button></div>
+            </div>
+        </div>
+    </div>
+    <div style="width: 80%;">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>
+                        用ID
+                    </td>
+                    <td>
+                        用户名
+                    </td>
+                    <td>
+                        创建时间
+                    </td>
+                    <td>
+                        最后更新时间
+                    </td>
+                    <td>
+                        操作
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr ng-repeat="item in users">
+           
+                    <td>{{item.UserId}}</td>
+                    <td>{{item.UserName}}</td>
+                    <td>{{item.CreateTime}}</td>
+                    <td>{{item.UpdateTime}}</td>
+               
+                    <td>
+                            <button type="button" class="btn btn-sm btn-primary" ng-click="showUpdateDiv(item)" >
+                                更新</button>
+                            <button type="button" class="btn btn-sm btn-danger" ng-click="deleteUser(item)">
+                                删除</button>
+                        </td>
+                </tr>
+
+           
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+@section scripts{
+   <script src="@Url.Content("~/Scripts/Module.js")" type="text/javascript"></script>
+
+<script src="@Url.Content("~/Scripts/User/Service.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/User/Controller.js")" type="text/javascript"></script>
+
+   @*    <script src="@Url.Content("~/Scripts/Angular/Module.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/Angular/Service.js")" type="text/javascript"></script>
+         <script src="@Url.Content("~/Scripts/Angular/Controller.js")" type="text/javascript"></script>*@
+}
+
+

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9F1CB9A-08E6-4085-AE84-34C399A355C0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ctrip.SOA.Bussiness.Order</RootNamespace>
+    <AssemblyName>Ctrip.SOA.Bussiness.Order</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OrderBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ctrip.SOA.Bussiness.Order.DataContract\Ctrip.SOA.Bussiness.Order.DataContract.csproj">
+      <Project>{2aa8b133-6ec0-472f-8952-4eaee55195ab}</Project>
+      <Name>Ctrip.SOA.Bussiness.Order.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ctrip.SOA.Bussiness.Order.IBussiness\Ctrip.SOA.Bussiness.Order.IBussiness.csproj">
+      <Project>{3c3c4bd3-b60d-4d9e-8d0b-3fe5a16f1094}</Project>
+      <Name>Ctrip.SOA.Bussiness.Order.IBussiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ctrip.SOA.Infratructure\Ctrip.SOA.Infratructure.csproj">
+      <Project>{44f22751-0511-46ed-9cea-5510c4f84f35}</Project>
+      <Name>Ctrip.SOA.Infratructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ctrip.SOA.Repository.Order.IRepository\Ctrip.SOA.Repository.Order.IRepository.csproj">
+      <Project>{894722db-4b13-4800-9034-83b034b4e614}</Project>
+      <Name>Ctrip.SOA.Repository.Order.IRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ctrip.SOA.Repository.Order.Model\Ctrip.SOA.Repository.Order.Model.csproj">
+      <Project>{250da4a6-0ef4-41f4-b29a-ceccd44665f1}</Project>
+      <Name>Ctrip.SOA.Repository.Order.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

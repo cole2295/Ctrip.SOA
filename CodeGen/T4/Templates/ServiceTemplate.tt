@@ -1,0 +1,128 @@
+﻿<#+
+    public class ServiceTemplate : Template
+    {
+        private DatabaseSchemaReader.DataSchema.DatabaseTable _databaseTable;
+        private ClassGenInfo _classGenInfo;
+
+        public ServiceTemplate(ClassGenInfo classGenInfo,DatabaseSchemaReader.DataSchema.DatabaseTable databaseTable)
+        {
+            _classGenInfo = classGenInfo;
+            _databaseTable = databaseTable;
+            PrimaryKeyName = _databaseTable.PrimaryKeyColumn.Name;
+        }
+
+        private string _className;
+        protected string ClassName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_className))
+                {
+                    _className = _classGenInfo.GetClassName(_databaseTable.Name);
+                }
+                return _className;
+            }
+        }
+
+        private string _tableName;
+        protected string TableName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_tableName))
+                {
+                    _tableName = ClassName;
+                }
+
+                return _tableName;
+            }
+        }
+
+        protected string PrimaryKeyName{get;set;}
+
+        private string _fileName;
+        public string FileName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_fileName))
+                {
+                    _fileName = "ProductService." + ClassName + ".cs";
+                }
+
+                return _fileName;
+            }
+        }
+
+        public override string TransformText()
+        {
+#>
+/* ->
+* -> 该代码使用工具生成，请勿手动修改 
+* -> 生成时间： <#=            DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") #> 
+*/
+
+using Infrastructure.Utility;
+using Model.Marketing.Models;
+using ServiceContract.Marketing;
+
+namespace <#= _classGenInfo.NameSpace #>
+{
+     public partial class ProductService : IProductService
+     {        
+        /// <summary>
+        /// 新增<#= _databaseTable.Description ?? TableName #>
+        /// </summary>
+        /// <param name="request">新增<#= _databaseTable.Description ?? TableName #>请求对象</param>
+        /// <returns>新增<#= _databaseTable.Description ?? TableName #>返回对象</returns>
+        public Add<#= TableName #>ResponseType Add<#= TableName #>(Add<#= TableName #>RequestType request)
+        {
+            return new Add<#= TableName #>ResponseType
+            {
+                <#= PrimaryKeyName #> = <#= TableName #>Bll.Create<#= TableName #>(request.<#= TableName #>.MapTo<<#= TableName #>Entity>())
+            };
+        }
+
+        /// <summary>
+        /// 移除<#= _databaseTable.Description ?? TableName #>
+        /// </summary>
+        /// <param name="request">移除<#= _databaseTable.Description ?? TableName #>对象</param>
+        /// <returns>移除<#= _databaseTable.Description ?? TableName #>返回对象</returns>
+        public Remove<#= TableName #>ResponseType Remove<#= TableName #>(Remove<#= TableName #>RequestType request)
+        {
+            var response = new Remove<#= TableName #>ResponseType();
+            <#= TableName #>Bll.Remove<#= TableName #>ByPk(request.<#= PrimaryKeyName #>);
+            return response;
+        }
+
+        /// <summary>
+        /// 更新<#= _databaseTable.Description ?? TableName #>
+        /// </summary>
+        /// <param name="request">更新<#= _databaseTable.Description ?? TableName #>对象</param>
+        /// <returns>更新<#= _databaseTable.Description ?? TableName #>返回对象</returns>
+        public Edit<#= TableName #>ResponseType Edit<#= TableName #>(Edit<#= TableName #>RequestType request)
+        {
+            var response = new Edit<#= TableName #>ResponseType();
+            <#= TableName #>Bll.Edit<#= TableName #>(request.<#= TableName #>.MapTo<<#= TableName #>Entity>());
+            return response;
+        }
+
+        /// <summary>
+        /// 获取<#= _databaseTable.Description ?? TableName #>
+        /// </summary>
+        /// <param name="request">获取<#= _databaseTable.Description ?? TableName #>对象</param>
+        /// <returns>获取<#= _databaseTable.Description ?? TableName #>返回对象</returns>
+        public Get<#= TableName #>ResponseType Get<#= TableName #>(Get<#= TableName #>RequestType request)
+        {
+            return new Get<#= TableName #>ResponseType
+            {
+                <#= TableName #> = <#= TableName #>Bll.Get<#= TableName #>ByPk(request.<#= PrimaryKeyName #>).MapTo<<#= TableName #>>()
+            };
+        }
+     }
+}
+<#+
+            return this.GenerationEnvironment.ToString();
+        }
+    }
+#>

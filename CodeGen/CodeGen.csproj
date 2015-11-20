@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC010071-50C1-40A2-A3A5-E72B7B5CC332}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeGen</RootNamespace>
+    <AssemblyName>CodeGen</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DatabaseSchemaReader">
+      <HintPath>..\DLL\DatabaseSchemaReader.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T4\Codes\Business\OrderBLL.cs" />
+    <Compile Include="T4\Codes\Business\ProductBLL.cs" />
+    <Compile Include="T4\Codes\Business\UserBLL.cs" />
+    <Compile Include="T4\Codes\DAL\OrderDal.cs" />
+    <Compile Include="T4\Codes\DAL\ProductDal.cs" />
+    <Compile Include="T4\Codes\DAL\UserDal.cs" />
+    <Compile Include="T4\Codes\Entities\OrderEntity.cs" />
+    <Compile Include="T4\Codes\Entities\ProductEntity.cs" />
+    <Compile Include="T4\Codes\Entities\UserEntity.cs" />
+    <Compile Include="T4\Codes\IBusiness\IOrderBLL.cs" />
+    <Compile Include="T4\Codes\IBusiness\IProductBLL.cs" />
+    <Compile Include="T4\Codes\IBusiness\IUserBLL.cs" />
+    <Compile Include="T4\Codes\InsertDB\OrderInsertDB.cs" />
+    <Compile Include="T4\Codes\InsertDB\ProductInsertDB.cs" />
+    <Compile Include="T4\Codes\InsertDB\UserInsertDB.cs" />
+    <Compile Include="T4\Codes\IRepos\IOrderRepository.cs" />
+    <Compile Include="T4\Codes\IRepos\IProductRepository.cs" />
+    <Compile Include="T4\Codes\IRepos\IUserRepository.cs" />
+    <Compile Include="T4\Codes\Repositories\OrderRepository.cs" />
+    <Compile Include="T4\Codes\Repositories\ProductRepository.cs" />
+    <Compile Include="T4\Codes\Repositories\UserRepository.cs" />
+    <Compile Include="T4\Codes\SelectDB\OrderSelectDB.cs" />
+    <Compile Include="T4\Codes\SelectDB\ProductSelectDB.cs" />
+    <Compile Include="T4\Codes\SelectDB\UserSelectDB.cs" />
+    <Compile Include="T4\Common.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="T4\Templates\SelectDBTemplate.cs">
+      <DependentUpon>SelectDBTemplate.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="T4\Templates\InsertDBTemplate.cs">
+      <DependentUpon>InsertDBTemplate.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="T4\Templates\Procedure.cs">
+      <DependentUpon>Procedure.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="T4\Templates\BusinessTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BusinessTemplate.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="T4\Templates\DALTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DALTemplate.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="T4\Templates\EntityTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4\Templates\IBusinessTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IBusinessTemplate.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="T4\Templates\IReposTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IReposTemplate.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="T4\Templates\RepositoryTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepositoryTemplate.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="T4\Templates\ServiceTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceTemplate.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="T4\Templates\STDTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STDTemplate.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="T4\Templates\STDTypeTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STDTypeTemplate.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="T4\Codes\Procedure\Order.Sql" />
+    <Content Include="T4\Codes\Procedure\Product.Sql" />
+    <Content Include="T4\Codes\Procedure\User.Sql" />
+    <Content Include="T4\Common.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Common.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\T4Script.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>T4Script.txt</LastGenOutput>
+      <LastOutputs>
+.\Codes\Business\OrderBLL.cs
+.\Codes\Business\ProductBLL.cs
+.\Codes\Business\UserBLL.cs
+.\Codes\DAL\OrderDal.cs
+.\Codes\DAL\ProductDal.cs
+.\Codes\DAL\UserDal.cs
+.\Codes\Entities\OrderEntity.cs
+.\Codes\Entities\ProductEntity.cs
+.\Codes\Entities\UserEntity.cs
+.\Codes\IBusiness\IOrderBLL.cs
+.\Codes\IBusiness\IProductBLL.cs
+.\Codes\IBusiness\IUserBLL.cs
+.\Codes\InsertDB\OrderInsertDB.cs
+.\Codes\InsertDB\ProductInsertDB.cs
+.\Codes\InsertDB\UserInsertDB.cs
+.\Codes\IRepos\IOrderRepository.cs
+.\Codes\IRepos\IProductRepository.cs
+.\Codes\IRepos\IUserRepository.cs
+.\Codes\Procedure\Order.Sql
+.\Codes\Procedure\Product.Sql
+.\Codes\Procedure\User.Sql
+.\Codes\SelectDB\OrderSelectDB.cs
+.\Codes\SelectDB\ProductSelectDB.cs
+.\Codes\SelectDB\UserSelectDB.cs
+.\T4Script.txt
+</LastOutputs>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\T4Script.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>T4Script.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\Templates\SelectDBTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SelectDBTemplate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\Templates\InsertDBTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>InsertDBTemplate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\Templates\Procedure.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Procedure.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\Templates\BusinessTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BusinessTemplate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\Templates\DALTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DALTemplate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\Templates\EntityTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EntityTemplate.cs</LastGenOutput>
+    </Content>
+    <Content Include="T4\Templates\IBusinessTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IBusinessTemplate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\Templates\IReposTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IReposTemplate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\Templates\RepositoryTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\Templates\ServiceTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ServiceTemplate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\Templates\STDTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>STDTemplate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="T4\Templates\STDTypeTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>STDTypeTemplate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

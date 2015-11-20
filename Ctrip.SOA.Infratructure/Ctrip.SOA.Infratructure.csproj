@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44F22751-0511-46ED-9CEA-5510C4F84F35}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ctrip.SOA.Infratructure</RootNamespace>
+    <AssemblyName>Ctrip.SOA.Infratructure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Arch.App.Cache.Client">
+      <HintPath>..\DLL\Arch.App.Cache.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Arch.CFramework.Data">
+      <HintPath>..\DLL\Arch.CFramework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Arch.CFramework.Utility">
+      <HintPath>..\DLL\Arch.CFramework.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Arch.CFX">
+      <HintPath>..\DLL\Arch.CFX.dll</HintPath>
+    </Reference>
+    <Reference Include="Arch.CFX.CLoggingAdapter">
+      <HintPath>..\DLL\Arch.CFX.CLoggingAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Arch.Data">
+      <HintPath>..\DLL\Arch.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Arch.Framework.Logging">
+      <HintPath>..\DLL\Arch.Framework.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Arch.Framework.Security">
+      <HintPath>..\DLL\Arch.Framework.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Arch.Framework.Utility">
+      <HintPath>..\DLL\Arch.Framework.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\DLL\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\DLL\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="ChineseConverter">
+      <HintPath>..\DLL\ChineseConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="IOCFactory">
+      <HintPath>..\DLL\IOCFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="IOCFactoryModel">
+      <HintPath>..\DLL\IOCFactoryModel.dll</HintPath>
+    </Reference>
+    <Reference Include="IPAddress.Client">
+      <HintPath>..\DLL\IPAddress.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.PolicyInjection">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.PolicyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder">
+      <HintPath>..\DLL\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\DLL\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\DLL\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\DLL\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\DLL\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ctrip.SOA.Web\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Wcf">
+      <HintPath>..\DLL\Unity.Wcf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aop\CacheAttribute.cs" />
+    <Compile Include="Aop\CacheHandler.cs" />
+    <Compile Include="Aop\LogExceptionAttribute.cs" />
+    <Compile Include="Aop\LogExceptionHandler.cs" />
+    <Compile Include="Aop\LogTraceAttribute.cs" />
+    <Compile Include="Aop\LogTraceHandler.cs" />
+    <Compile Include="Aop\MetricElapsedHandler.cs" />
+    <Compile Include="Aop\MetricHandlerAttribute.cs" />
+    <Compile Include="Aop\TrancationAttribute.cs" />
+    <Compile Include="Aop\TrancationHandler.cs" />
+    <Compile Include="Collections\DuplicateKeyException.cs" />
+    <Compile Include="Collections\DuplicateKeyException.Desktop.cs" />
+    <Compile Include="Collections\EnumerableExtensions.cs" />
+    <Compile Include="Collections\IKeyedObject.cs" />
+    <Compile Include="Collections\IKeyValueCollection.cs" />
+    <Compile Include="Collections\KeyedCollectionBase.cs" />
+    <Compile Include="Collections\KeyedObjectCollection.cs" />
+    <Compile Include="Collections\KeyedObjectCollectionT.cs" />
+    <Compile Include="Collections\KeyValueCollectionT.cs" />
+    <Compile Include="Collections\KeyValueT.cs" />
+    <Compile Include="Collections\SerializableDictionaryT.cs" />
+    <Compile Include="Collections\SerializableHashtable.cs" />
+    <Compile Include="Common\ConvertHelper.cs" />
+    <Compile Include="Common\Entity\DataMapper.cs" />
+    <Compile Include="Common\Entity\DataMapperProvider.cs" />
+    <Compile Include="Common\Entity\DataMapperProviderBase.cs" />
+    <Compile Include="Common\Entity\DataMappingException.cs" />
+    <Compile Include="Common\Entity\DataReaderDataSource.cs" />
+    <Compile Include="Common\Entity\DataRowDataSource.cs" />
+    <Compile Include="Common\Entity\DictionaryDataSource.cs" />
+    <Compile Include="Common\Entity\DictionaryGenericDataSource.cs" />
+    <Compile Include="Common\Entity\EntityBase.cs" />
+    <Compile Include="Common\Entity\IDataMapperProvider.cs" />
+    <Compile Include="Common\Entity\IRowDataSource.cs" />
+    <Compile Include="Common\Entity\MapBuilder.cs" />
+    <Compile Include="Common\Entity\MapConsts.cs" />
+    <Compile Include="Common\Entity\MapResult.cs" />
+    <Compile Include="Common\Entity\MapResultGeneric.cs" />
+    <Compile Include="Common\Entity\PropertyMap.cs" />
+    <Compile Include="Common\Entity\PropertyMapCache.cs" />
+    <Compile Include="Common\Entity\PropertyMapCollection.cs" />
+    <Compile Include="Common\Search\PagingSearchParams.cs" />
+    <Compile Include="Common\Search\PagingSearchResultBase.cs" />
+    <Compile Include="Common\Search\SearchCondition.cs" />
+    <Compile Include="Common\Search\SortingType.cs" />
+    <Compile Include="Consts\Consts.cs" />
+    <Compile Include="CookieManage.cs" />
+    <Compile Include="Data\BaseDaoExt.cs" />
+    <Compile Include="Data\DALContext.cs" />
+    <Compile Include="Data\DataContext.cs" />
+    <Compile Include="Data\DBConsts.cs" />
+    <Compile Include="Data\DbHelper.cs" />
+    <Compile Include="Data\DBParameterCheck.cs" />
+    <Compile Include="Data\DBStaticReg.cs" />
+    <Compile Include="Enums\EmailType.cs" />
+    <Compile Include="Enums\Enum.cs" />
+    <Compile Include="Enums\OrderDirection.cs" />
+    <Compile Include="Enums\ProductCategory.cs" />
+    <Compile Include="Enums\ProductDescType.cs" />
+    <Compile Include="Enums\SortRule.cs" />
+    <Compile Include="Enums\SysFlightOrderBy.cs" />
+    <Compile Include="Enums\TravelType.cs" />
+    <Compile Include="Exceptions\PermissionException.cs" />
+    <Compile Include="Extension\DataReaderExtension.cs" />
+    <Compile Include="Extension\JsonNewResult.cs" />
+    <Compile Include="IOCFactory\IOCFactoryModel\Enum\ContextParamNameEnum.cs" />
+    <Compile Include="IOCFactory\IOCFactoryModel\Enum\CustomerMethodEffectEnum.cs" />
+    <Compile Include="IOCFactory\IOCFactoryModel\Enum\FactoryMappingFilePattern.cs" />
+    <Compile Include="IOCFactory\IOCFactoryModel\InstType.cs" />
+    <Compile Include="IOCFactory\IOCFactoryModel\Interface\IInstCreator.cs" />
+    <Compile Include="IOCFactory\IOCFactoryModel\Interface\IRegistContextReader.cs" />
+    <Compile Include="IOCFactory\IOCFactoryModel\RegistCheckResult.cs" />
+    <Compile Include="IOCFactory\IOCFactoryModel\RegistContext.cs" />
+    <Compile Include="IOCFactory\IOCFactoryModel\RegistMappingContext.cs" />
+    <Compile Include="IOCFactory\IOCFactoryModel\RegistMappingContextCollection.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Factory.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\ILInstCreator\NormalInstCreator.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\InstCreator\DecorateInstCreator.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\InstCreator\DIInstCreator.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\InstCreator\DISingletonInstCreator.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\InstCreator\NormalInstCreator.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\InstCreator\SingletonInstCreator.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\LambdaInstCreator\NormalInstCreator.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\RegistContextReader\NormalReader.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\RegistContextReader\UnityMappingFileReader\Reader.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\RegistContextReader\UnityMappingFileReader\UnityModel\Container.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\RegistContextReader\UnityMappingFileReader\UnityModel\Containers.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\RegistContextReader\UnityMappingFileReader\UnityModel\LifeTime.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\RegistContextReader\UnityMappingFileReader\UnityModel\LifeTimeEnum.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\RegistContextReader\UnityMappingFileReader\UnityModel\TypeAlias.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\RegistContextReader\UnityMappingFileReader\UnityModel\TypeAliases.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\RegistContextReader\UnityMappingFileReader\UnityModel\Unity.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\RegistContextReader\UnityMappingFileReader\UnityModel\UnityType.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Model\Imp\RegistContextReader\UnityMappingFileReader\UnityModel\UnityTypes.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Util\InstCreatorFactory.cs" />
+    <Compile Include="IOCFactory\IOCFactory\Util\IOCFactoryUnitySectionHandler.cs" />
+    <Compile Include="Logging\LogHelper.cs" />
+    <Compile Include="Memcached\APIResultCode.cs" />
+    <Compile Include="Memcached\BaseInvokeParameter.cs" />
+    <Compile Include="Memcached\BaseReturnEntity.cs" />
+    <Compile Include="Memcached\ByteSliceEntity.cs" />
+    <Compile Include="Memcached\CacheManager.cs" />
+    <Compile Include="Memcached\CommonCacheFunc.cs" />
+    <Compile Include="Memcached\DataEntityBinarySerialize.cs" />
+    <Compile Include="Memcached\HHMemCachedDllImport.cs" />
+    <Compile Include="Memcached\IBaseInvokeClass.cs" />
+    <Compile Include="Memcached\ISerialize.cs" />
+    <Compile Include="Memcached\KeyPrefix.cs" />
+    <Compile Include="MVC\BaseController.cs" />
+    <Compile Include="Permission\AuthUser.cs" />
+    <Compile Include="Permission\LocalCache.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\CallMethodException.cs" />
+    <Compile Include="Reflection\CallMethodException.Desktop.cs" />
+    <Compile Include="Reflection\Core\IMergable.cs" />
+    <Compile Include="Reflection\Core\InjectedParameter.cs" />
+    <Compile Include="Reflection\Core\TypeResolution\CachedTypeResolver.cs" />
+    <Compile Include="Reflection\Core\TypeResolution\GenericArgumentsInfo.cs" />
+    <Compile Include="Reflection\Core\TypeResolution\ITypeResolver.cs" />
+    <Compile Include="Reflection\Core\TypeResolution\TypeAssemblyInfo.cs" />
+    <Compile Include="Reflection\Core\TypeResolution\TypeRegistry.cs" />
+    <Compile Include="Reflection\Core\TypeResolution\TypeResolver.cs" />
+    <Compile Include="Reflection\Dynamic\Constructor\DynamicConstructor.cs" />
+    <Compile Include="Reflection\Dynamic\Constructor\DynamicConstructorCache.cs" />
+    <Compile Include="Reflection\Dynamic\Constructor\DynamicConstructorCacheKey.cs" />
+    <Compile Include="Reflection\Dynamic\Constructor\DynamicConstructorDelegate.cs" />
+    <Compile Include="Reflection\Dynamic\Constructor\IDynamicConstructor.cs" />
+    <Compile Include="Reflection\Dynamic\Constructor\SafeConstructor.cs" />
+    <Compile Include="Reflection\Dynamic\DynamicReflectionManager.cs" />
+    <Compile Include="Reflection\Dynamic\Method\DynamicMethod.cs" />
+    <Compile Include="Reflection\Dynamic\Method\DynamicMethodCache.cs" />
+    <Compile Include="Reflection\Dynamic\Method\DynamicMethodDelegate.cs" />
+    <Compile Include="Reflection\Dynamic\Method\IDynamicMethod.cs" />
+    <Compile Include="Reflection\Dynamic\Method\SafeMethod.cs" />
+    <Compile Include="Reflection\Dynamic\Property\DynamicProperty.cs" />
+    <Compile Include="Reflection\Dynamic\Property\DynamicPropertyCache.cs" />
+    <Compile Include="Reflection\Dynamic\Property\DynamicPropertyDelegate.cs" />
+    <Compile Include="Reflection\Dynamic\Property\IDynamicProperty.cs" />
+    <Compile Include="Reflection\Dynamic\Property\SafeProperty.cs" />
+    <Compile Include="Reflection\MethodCacheKey.cs" />
+    <Compile Include="Reflection\MethodCaller.cs" />
+    <Compile Include="Reflection\ReflectionHelper.cs" />
+    <Compile Include="Reflection\ReflectionSR.Designer.cs" />
+    <Compile Include="Security\SecurityHelper.cs" />
+    <Compile Include="Serialization\GenericSerializationInfo.cs" />
+    <Compile Include="Serialization\IO\EncodedStringWriter.cs" />
+    <Compile Include="Serialization\IProtobufSerializer.cs" />
+    <Compile Include="Serialization\ISerializer.cs" />
+    <Compile Include="Serialization\Json\DataContractJsonSerializerWrapper.cs" />
+    <Compile Include="Serialization\Json\NewtonsoftJsonSerializer.cs" />
+    <Compile Include="Serialization\SerializationMode.cs" />
+    <Compile Include="Serialization\Serializer.cs" />
+    <Compile Include="Serialization\SerializerBase.cs" />
+    <Compile Include="Serialization\Settings\DefaultSerializationSettings.cs" />
+    <Compile Include="Serialization\Settings\ISerializationSettings.cs" />
+    <Compile Include="Serialization\Settings\SerializationSettings.cs" />
+    <Compile Include="Serialization\Support\ProtoBufSerializer.cs" />
+    <Compile Include="Serialization\Xml\IXmlSerializer.cs" />
+    <Compile Include="Serialization\Xml\XmlSerializerBase.cs" />
+    <Compile Include="Serialization\Xml\XmlSerializerCache.cs" />
+    <Compile Include="Serialization\Xml\XmlSerializerCacheKey.cs" />
+    <Compile Include="Serialization\Xml\XmlSerializerWrapper.cs" />
+    <Compile Include="ServiceProxy\ApplicationContext.cs" />
+    <Compile Include="ServiceProxy\BaseResponse.cs" />
+    <Compile Include="ServiceProxy\ChannelFactoryCreator.cs" />
+    <Compile Include="ServiceProxy\ChannelProxy.cs" />
+    <Compile Include="ServiceProxy\ContextPropagationBehaviorAttribute.cs" />
+    <Compile Include="ServiceProxy\ContextReceivalCallContextInitializer.cs" />
+    <Compile Include="ServiceProxy\ContextSendInspector.cs" />
+    <Compile Include="ServiceProxy\ServiceBase.cs" />
+    <Compile Include="ServiceProxy\ServiceProxy.cs" />
+    <Compile Include="ServiceProxy\ServiceProxyFactory.cs" />
+    <Compile Include="ServiceProxy\ServiceRealProxy.cs" />
+    <Compile Include="StringHelper.cs" />
+    <Compile Include="Threading\CallContextStorage.cs" />
+    <Compile Include="Threading\HttpContextStorage.cs" />
+    <Compile Include="Threading\HybirdContextStorage.cs" />
+    <Compile Include="Threading\IThreadStorage.cs" />
+    <Compile Include="Threading\ThreadContext.cs" />
+    <Compile Include="Threading\ThreadStaticStorage.cs" />
+    <Compile Include="Threading\ThreadStoreBase.cs" />
+    <Compile Include="TypeConversion\BaseTypeConverter.cs" />
+    <Compile Include="TypeConversion\BooleanConverter.cs" />
+    <Compile Include="TypeConversion\CustomNumberConverter.cs" />
+    <Compile Include="TypeConversion\DateTimeConverter.cs" />
+    <Compile Include="TypeConversion\EntityTypeConverter.cs" />
+    <Compile Include="TypeConversion\EnumConverter.cs" />
+    <Compile Include="TypeConversion\GuidConverter.cs" />
+    <Compile Include="TypeConversion\ITypeConverter.cs" />
+    <Compile Include="TypeConversion\NullableConverter.cs" />
+    <Compile Include="TypeConversion\SimpleEnumConverter.cs" />
+    <Compile Include="TypeConversion\StringConverter.cs" />
+    <Compile Include="TypeConversion\TC.Designer.cs" />
+    <Compile Include="TypeConversion\TypeConverterRegistry.cs" />
+    <Compile Include="Unity\ContainerExtensions\ChannelInstanceFactory.cs" />
+    <Compile Include="Unity\ContainerExtensions\IInstanceFactory.cs" />
+    <Compile Include="Unity\ContainerExtensions\InstanceFactoryBuilderStrategy.cs" />
+    <Compile Include="Unity\ContainerExtensions\InstanceFactoryContainerExtension.cs" />
+    <Compile Include="Unity\UnityContainerManager.cs" />
+    <Compile Include="Utility\AppSetting.cs" />
+    <Compile Include="Utility\AutoMapperHelper.cs" />
+    <Compile Include="Utility\Converter.cs" />
+    <Compile Include="Utility\Converter2.cs" />
+    <Compile Include="Utility\CssSrcConfig.cs" />
+    <Compile Include="Utility\DateAttribute.cs" />
+    <Compile Include="Utility\DateTimeHelper.cs" />
+    <Compile Include="Utility\Enum\EnumExtensions.cs" />
+    <Compile Include="Utility\Enum\EnumHelper.cs" />
+    <Compile Include="Utility\Enum\EnumItem.cs" />
+    <Compile Include="Utility\Enum\EnumItemAttribute.cs" />
+    <Compile Include="Utility\Enum\EnumTypeCache.cs" />
+    <Compile Include="Utility\Enum\EnumTypeCacheItem.cs" />
+    <Compile Include="Utility\EnvironmentHelper.cs" />
+    <Compile Include="Utility\ExceptionHelper.cs" />
+    <Compile Include="Utility\FormString.cs" />
+    <Compile Include="Utility\Guard.cs" />
+    <Compile Include="Utility\HHUtility.cs" />
+    <Compile Include="Utility\IPAnalyzer\Interface\IIPAnalyzer.cs" />
+    <Compile Include="Utility\IPAnalyzer\Interface\IIPPatternAnalyzer.cs" />
+    <Compile Include="Utility\IPAnalyzer\Model\IPAnalyzerModel\NormalIPAnalyzer.cs" />
+    <Compile Include="Utility\IPAnalyzer\Model\IPAnalyzerRegistHelper.cs" />
+    <Compile Include="Utility\IPAnalyzer\Model\IPPatternAnalyzerModel\IntervalPatternAnalyzer.cs" />
+    <Compile Include="Utility\IPAnalyzer\Model\IPPatternAnalyzerModel\NormalPatternAnalyzer.cs" />
+    <Compile Include="Utility\JsSrcConfig.cs" />
+    <Compile Include="Utility\NativeMethods.cs" />
+    <Compile Include="Utility\NetUtility.cs" />
+    <Compile Include="Utility\PathHelper.cs" />
+    <Compile Include="Utility\StringHelper.cs" />
+    <Compile Include="Utility\StringUtils.cs" />
+    <Compile Include="Utility\ThrowHelper.cs" />
+    <Compile Include="Utility\TimeStampHelper.cs" />
+    <Compile Include="Utility\TypeHelper.cs" />
+    <Compile Include="Wcf\GlobalExceptionHandler.cs" />
+    <Compile Include="Wcf\GlobalExceptionHandlerBehaviourAttribute.cs" />
+    <Compile Include="Wcf\WcfServiceHostFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reflection\ReflectionSR.resx" />
+    <EmbeddedResource Include="TypeConversion\TC.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Utility\Enum\Enum.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

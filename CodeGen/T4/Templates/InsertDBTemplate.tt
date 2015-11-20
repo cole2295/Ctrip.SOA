@@ -1,0 +1,174 @@
+﻿<#+
+    public class InsertDBTemplate : Template
+    {
+        private DatabaseSchemaReader.DataSchema.DatabaseTable _databaseTable;
+        private ClassGenInfo _classGenInfo;
+
+        public InsertDBTemplate(ClassGenInfo classGenInfo, DatabaseSchemaReader.DataSchema.DatabaseTable databaseTable)
+        {
+            _classGenInfo = classGenInfo;
+            _databaseTable = databaseTable;
+        }
+
+        private string _className;
+        protected string ClassName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_className))
+                {
+                    _className = _classGenInfo.GetClassName(_databaseTable.Name);
+                }
+                return _className;
+            }
+        }
+
+        private string _fileName;
+        public string FileName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_fileName))
+                {
+                    _fileName = ClassName + "InsertDB.cs";
+                }
+
+                return _fileName;
+            }
+        }
+
+        private string _tableName;
+        protected string TableName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_tableName))
+                {
+                    _tableName = ClassName.Substring(0, ClassName.Length -_classGenInfo.NameSuffix.Length);
+                }
+
+                return _tableName;
+            }
+        }
+
+        private string _modelName;
+        protected string ModelName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_modelName))
+                {
+                    _modelName = TableName + "Model";
+                }
+
+                return _modelName;
+            }
+        }
+
+        private string _entityName;
+        public string EntityName
+        {
+            get
+            {
+                if(string.IsNullOrWhiteSpace(_entityName))
+                {
+                    _entityName = TableName + "Entity";
+                }
+
+                return _entityName;
+            }
+        }
+
+        private string _repositoryName;
+        protected string RepositoryName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_repositoryName))
+                {
+                    _repositoryName = TableName + "Repository";
+                }
+
+                return _repositoryName;
+            }
+        }
+
+        public override string TransformText()
+        {
+#>
+/* ->
+* -> 该代码使用工具生成，请勿手动修改 
+* -> 生成时间： <#=            DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") #> 
+*/
+
+using Ctrip.SOA.Repository.<#= _databaseTable.Name #>.Interface;
+using Ctrip.SOA.Repository.<#= _databaseTable.Name #>.Model;
+using HHInfratructure.Data;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ctrip.SOA.Repository.<#= _databaseTable.Name #>.Dal
+{
+    public class <#= _databaseTable.Name #>InsertDB : DALContext, I<#= _databaseTable.Name #>InsertDB
+    {
+        public <#= _databaseTable.Name #>InsertDB() : base(DBConsts.TestDB) { }
+
+        public long Insert<#= _databaseTable.Name #>(<#= _databaseTable.Name #>Entity entity)
+        {
+            var dbCommand = DB.GetStoredProcCommand("spA_<#= _databaseTable.Name #>_i");
+            AddInParameter(dbCommand, entity, false);
+            DB.AddOutParameter(dbCommand, "@<#= _databaseTable.Name #>Id", DbType.Int64, 8);
+
+            DB.ExecuteNonQuery(dbCommand);
+            entity.<#= _databaseTable.Name #>Id = DbHelper.ConvertTo<long>(DB.GetParameterValue(dbCommand, "@<#= _databaseTable.Name #>Id"));
+            return entity.<#= _databaseTable.Name #>Id;
+        }
+
+        public bool Update<#= _databaseTable.Name #>(<#= _databaseTable.Name #>Entity entity)
+        {
+            var dbCommand = DB.GetStoredProcCommand("spA_<#= _databaseTable.Name #>_u");
+            AddInParameter(dbCommand, entity, true);
+            return DbHelper.ConvertTo<int>(DB.ExecuteScalar(dbCommand)) == 0;
+        }
+
+        public void Delete<#= _databaseTable.Name #>(<#= _databaseTable.Name #>Entity entity)
+        {
+            var command = DB.GetStoredProcCommand("spA_<#= _databaseTable.Name #>_d");
+            DB.AddInParameter(command, "@<#= _databaseTable.Name #>Id", DbType.Int64, entity.<#= _databaseTable.Name #>Id);
+            DB.ExecuteNonQuery(command);
+        }
+
+        protected void AddInParameter(DbCommand command, <#= _databaseTable.Name #>Entity entity, bool containsPrimaryKey)
+        {
+		   <#+ 
+       
+                foreach(var colSchema in _databaseTable.Columns) 
+                { 
+                   
+            #>
+			     <#+ if(!colSchema.IsPrimaryKey ) { #>
+
+				    DB.AddInParameter(command, "@<#= colSchema.Name #>", DbType.<#= ColumnSchemaHelper.GetDbType(colSchema) #>, entity.<#= colSchema.Name #>);
+				 <#+ } #>
+			<#+ } #>
+ 
+            if (containsPrimaryKey)
+            {
+                DB.AddInParameter(command, "@<#= _databaseTable.PrimaryKeyColumn.Name #>", DbType.<#= ColumnSchemaHelper.GetDbType(_databaseTable.PrimaryKeyColumn) #>, entity.<#= _databaseTable.PrimaryKeyColumn.Name #>);
+            }
+        }
+    }
+}
+
+
+
+<#+
+            return this.GenerationEnvironment.ToString();
+        }
+    }
+#>

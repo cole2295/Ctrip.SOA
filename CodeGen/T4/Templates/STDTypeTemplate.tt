@@ -1,0 +1,75 @@
+﻿<#+
+    public class STDTypeTemplate : Template
+    {
+        private DatabaseSchemaReader.DataSchema.DatabaseTable _databaseTable;
+        private ClassGenInfo _classGenInfo;
+
+        public STDTypeTemplate(ClassGenInfo classGenInfo,DatabaseSchemaReader.DataSchema.DatabaseTable databaseTable)
+        {
+            _classGenInfo = classGenInfo;
+            _databaseTable = databaseTable;
+            PrimaryKeyName = _databaseTable.PrimaryKeyColumn.Name;
+        }
+
+        private string _className;
+        protected string ClassName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_className))
+                {
+                    _className = _classGenInfo.GetClassName(_databaseTable.Name);
+                }
+                return _className;
+            }
+        }
+
+        private string _tableName;
+        protected string TableName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_tableName))
+                {
+                    _tableName = ClassName;
+                }
+
+                return _tableName;
+            }
+        }
+
+        protected string PrimaryKeyName{get;set;}
+
+        private string _fileName;
+        public string FileName
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_fileName))
+                {
+                    _fileName = ClassName + ".std";
+                }
+
+                return _fileName;
+            }
+        }
+
+        public override string TransformText()
+        {
+#>
+
+## <#= _databaseTable.Description ?? TableName #>
+ [<#=TableName #>]+  
+<#+
+            foreach(var colSchema in _databaseTable.Columns)
+            {
+ #>
+ <#= colSchema.Name #>                  : xs.<#= colSchema.DataType.NetDataTypeCSharpName #><#= (colSchema.IsPrimaryKey || !_classGenInfo.IsNull(colSchema.DataType.NetDataTypeCSharpName)) ? "" : "?"  #>        ## <#= colSchema.Description ?? string.Empty #>
+ <#+ 
+            }            
+#>
+<#+
+            return this.GenerationEnvironment.ToString();
+        }
+    }
+#>

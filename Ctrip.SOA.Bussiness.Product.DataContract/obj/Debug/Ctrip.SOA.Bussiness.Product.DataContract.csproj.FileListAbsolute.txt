@@ -1,0 +1,9 @@
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.DataContract\bin\Debug\Ctrip.SOA.Bussiness.Product.DataContract.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.DataContract\bin\Debug\Ctrip.SOA.Bussiness.Product.DataContract.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.DataContract\obj\Debug\Ctrip.SOA.Bussiness.Product.DataContract.dll
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.DataContract\obj\Debug\Ctrip.SOA.Bussiness.Product.DataContract.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.DataContract\bin\Debug\Ctrip.SOA.Bussiness.Product.DataContract.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.DataContract\bin\Debug\Ctrip.SOA.Bussiness.Product.DataContract.pdb
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.DataContract\obj\Debug\Ctrip.SOA.Bussiness.Product.DataContract.dll
+C:\Users\fengzijun\Desktop\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.DataContract\obj\Debug\Ctrip.SOA.Bussiness.Product.DataContract.pdb
+C:\Users\fengzj\Documents\Visual Studio 2015\Projects\Ctrip.SOA.Infratructure\Ctrip.SOA.Bussiness.Product.DataContract\obj\Debug\Ctrip.SOA.Bussiness.Product.DataContract.csprojResolveAssemblyReference.cache
