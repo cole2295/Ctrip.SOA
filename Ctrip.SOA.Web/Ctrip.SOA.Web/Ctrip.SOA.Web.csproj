@@ -147,6 +147,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Attribute\AuthAttribute.cs" />
     <Compile Include="Attribute\CustomHandleErrorAttribute.cs" />
+    <Compile Include="Attribute\LogFilter.cs" />
     <Compile Include="Attribute\ValidateReHttpPostTokenAttribute.cs" />
     <Compile Include="Attribute\ValidGuid.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
@@ -1043,6 +1044,9 @@
     <Content Include="Web.config.tpl" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Error\RePostError.cshtml" />
+    <Content Include="Views\Error\AccessDenied.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

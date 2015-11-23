@@ -16,5 +16,24 @@ namespace Ctrip.SOA.Web.Controllers
             return View();
         }
 
+        public ActionResult NotFound()
+        {
+            return View();
+        }
+
+        public ActionResult AccessDenied()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// 重复提交
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult RePostError()
+        {
+            return View();
+        }
+
     }
 }

@@ -8,15 +8,17 @@ using Ctrip.SOA.Bussiness.User.Service;
 using Ctrip.SOA.Infratructure.MVC;
 using Ctrip.SOA.Infratructure.ServiceProxy;
 using Ctrip.SOA.Infratructure.Aop;
+using Ctrip.SOA.Web.Attribute;
 
 
 namespace Ctrip.SOA.Web.Controllers
 {
+    [LogFilter]
     public class UserController : BaseController
     {
         public readonly IUserService userService = ServiceProxyFactory.CreateChannel<IUserService>();
 
-        [MetricElapsed("Index")]
+        //[MetricElapsed("Index")]
         public ActionResult Index()
         {
             //var users = userService.GetAllUsers();
